@@ -43,8 +43,7 @@
             <div class="topright">
                 <div class="carticon">
                     <!-- 購物車按鈕 -->
-                    <button onclick="document.getElementById('id01').style.display='block'"><i
-                            class="fa-solid fa-cart-shopping"></i></button>
+                    <button onclick="openNav()"><i class="fa-solid fa-cart-shopping"></i></button>
                 </div>
                 <div class="usericon">
                     <!-- 會員登入按鈕 -->
@@ -54,7 +53,12 @@
             </div>
         </header>
     </div>
-    <!-- 圖片 -->
+    <!-- 購物車左側欄 -->
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div style="color: white;">購物車是空的</div>
+
+    </div>
 
 
 
@@ -203,6 +207,18 @@
     </div>
 
 
+    <!-- 購物車彈出視窗 左側欄 -->
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
+
+
     <!-- The Modal 視窗-->
     <div id="id01" class="modal">
         <span onclick="document.getElementById('id01').style.display='none'" class="close"
@@ -229,7 +245,10 @@
 
             <div class="container btuser">
 
-                <span class="psw">忘記 <a href="#">密碼</a></span>
+                <span class="psw">
+                    <a href="#" style="color: #3a5a40;">忘記密碼</a>
+                    <a href="#" style="color: #3a5a40;">註冊會員</a>
+                </span>
                 <div class="btuserflex">
                     <button type="button" onclick="document.getElementById('id01').style.display='none'"
                         class="cancelbtn">取消</button>

@@ -45,8 +45,7 @@
 
                 <div class="carticon">
                     <!-- 購物車按鈕 -->
-                    <button onclick="document.getElementById('id01').style.display='block'"><i
-                            class="fa-solid fa-cart-shopping"></i></button>
+                    <button onclick="openNav()"><i class="fa-solid fa-cart-shopping"></i></button>
                 </div>
                 <div class="usericon">
                     <!-- 會員登入按鈕 -->
@@ -58,6 +57,13 @@
         </header>
     </div>
 
+    <!-- 購物車左側欄 -->
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div style="color: white;">購物車是空的</div>
+
+    </div>
+
     <!--超大 圖片 -->
     <div class="topimg">
         <!-- Slideshow container 圖片輪播-->
@@ -65,21 +71,21 @@
 
             <!-- Full-width images with number and caption text -->
             <div class="mySlides fade">
-                
+
                 <img src="img/index-store.jpg" alt="index-store" width="100%" height="650px" class="imgtransition">
-                
+
             </div>
 
             <div class="mySlides fade">
-                
+
                 <img src="img/index-store01.jpg" alt="index-store" width="100%" height="650px" class="imgtransition">
-                
+
             </div>
 
             <div class="mySlides fade">
-                
+
                 <img src="img/index03.png" alt="ndex-store" width="100%" height="650px" class="imgtransition">
-                
+
             </div>
 
         </div>
@@ -185,7 +191,7 @@
         </div>
 
         <!-- 人氣產品 -->
-        
+
 
         <!-- grid  方方區塊  -->
         <div class="grid">
@@ -199,13 +205,13 @@
                     <div>品牌起源</div>
                 </div>
             </a>
-            
+
             <a href="menu.html" class="gridsize">
                 <div class="gridborder">
                     <div>餐點介紹</div>
                 </div>
             </a>
-            
+
             <a href="store.html" class="gridsize">
                 <div class="gridborder">
                     <div>門市資訊</div>
@@ -223,6 +229,18 @@
     </div>
 
     <br>
+
+    <!-- 購物車彈出視窗 左側欄 -->
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
+
 
     <!-- The Modal -->
     <div id="id01" class="modal">
@@ -249,14 +267,14 @@
             </div>
 
             <div class="container btuser">
-                
-                    <span class="psw">忘記 <a href="#">密碼</a></span>
-                    <div class="btuserflex">
-                        <button type="button" onclick="document.getElementById('id01').style.display='none'"
-                            class="cancelbtn">取消</button>
-                        <button type="submit">登入</button>
-                    </div>
-                
+
+                <span class="psw">忘記 <a href="#">密碼</a></span>
+                <div class="btuserflex">
+                    <button type="button" onclick="document.getElementById('id01').style.display='none'"
+                        class="cancelbtn">取消</button>
+                    <button type="submit">登入</button>
+                </div>
+
             </div>
         </form>
     </div>

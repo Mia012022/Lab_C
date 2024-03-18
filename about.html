@@ -8,13 +8,15 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/about-style.css">
     <link rel="stylesheet" href="https://fontawesome.com/icons">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
 
 <body>
     <!-- 頁首 -->
-    
+
 
     <div class="fixed">
         <header>
@@ -22,7 +24,7 @@
                 <!-- 要放logo圖 -->
                 <h1 class="float-left">
                     <a href="index.html" class="logocolor">Früshstück芙舒可早午餐
-                        
+
                     </a>
                 </h1>
                 <!-- 導航目錄 -->
@@ -41,8 +43,7 @@
             <div class="topright">
                 <div class="carticon">
                     <!-- 購物車按鈕 -->
-                    <button onclick="document.getElementById('id01').style.display='block'"><i
-                            class="fa-solid fa-cart-shopping"></i></button>
+                    <button onclick="openNav()"><i class="fa-solid fa-cart-shopping"></i></button>
                 </div>
                 <div class="usericon">
                     <!-- 會員登入按鈕 -->
@@ -52,9 +53,14 @@
             </div>
         </header>
     </div>
-    <!-- 圖片 -->
-   
-    
+    <!-- 購物車左側欄 -->
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div style="color: white;">購物車是空的</div>
+
+    </div>
+
+
 
     <!-- 回到首頁 固定定位 -->
     <a href="#" class="pagetop">TOP</a>
@@ -64,7 +70,7 @@
         <div class="titletext">
             About us 關於我們
         </div>
-        
+
     </div>
     <!-- 內文 -->
     <div class="middle">
@@ -74,28 +80,44 @@
             </div>
         </div>
         <div class="midright">
-          <div><p class="midtext">2015年夏天，一對台中小夫妻實現了自己的夢想，創立了芙舒可早餐品牌。
+            <div>
+                <p class="midtext">2015年夏天，一對台中小夫妻實現了自己的夢想，創立了芙舒可早餐品牌。
 
-            起初他們從零開始，親力親為的在市場調查、產品開發、店面設計和廣告宣傳等細節上努力奮鬥，白手起家的他們一開始的生意不算太好，但是他們從不放棄，堅持不懈地學習和改進。
-            
-            夫妻兩人為了開發出特色的餐點，尋找更多在地特色食材，不斷克服困難和挑戰，致力於提供最健康、最特色的早餐選擇。
-            
-            讓品牌的核心做到讓人們在享受美食的同時也注重健康，以及讓自己的孩子都能夠吃到健康安心不過多加工的早餐。
-            
-            如今，芙舒可早午餐已經成為了一個受歡迎的品牌，全台擁有多間分店和忠實的顧客群。他們始終堅持地傳承了台灣早餐文化的精髓</p></div>
-            
-            <div><p class="midtext">芙舒可早餐一直以來重視台灣早餐文化，不斷努力研發創意、台味、客製化的特色產品，以滿足消費者對於更健康、更有特色餐點的需求。
+                    起初他們從零開始，親力親為的在市場調查、產品開發、店面設計和廣告宣傳等細節上努力奮鬥，白手起家的他們一開始的生意不算太好，但是他們從不放棄，堅持不懈地學習和改進。
 
-                相較於其他連鎖早(午)餐，我們不僅在店面裝潢上下功夫，更注重餐點的口味開發，讓消費者能夠有更多元的中西口味選擇。
-                
-                為了達到這樣的品牌目標，我們花費大量的時間和心力在餐點開發上，堅持不用傳統的微波加工食品，而是以自然食材烹調，讓每道餐點都充滿創意和台灣風味，並根據客人的喜好提供客製化的服務。</p></div>
+                    夫妻兩人為了開發出特色的餐點，尋找更多在地特色食材，不斷克服困難和挑戰，致力於提供最健康、最特色的早餐選擇。
+
+                    讓品牌的核心做到讓人們在享受美食的同時也注重健康，以及讓自己的孩子都能夠吃到健康安心不過多加工的早餐。
+
+                    如今，芙舒可早午餐已經成為了一個受歡迎的品牌，全台擁有多間分店和忠實的顧客群。他們始終堅持地傳承了台灣早餐文化的精髓</p>
+            </div>
+
+            <div>
+                <p class="midtext">芙舒可早餐一直以來重視台灣早餐文化，不斷努力研發創意、台味、客製化的特色產品，以滿足消費者對於更健康、更有特色餐點的需求。
+
+                    相較於其他連鎖早(午)餐，我們不僅在店面裝潢上下功夫，更注重餐點的口味開發，讓消費者能夠有更多元的中西口味選擇。
+
+                    為了達到這樣的品牌目標，我們花費大量的時間和心力在餐點開發上，堅持不用傳統的微波加工食品，而是以自然食材烹調，讓每道餐點都充滿創意和台灣風味，並根據客人的喜好提供客製化的服務。</p>
+            </div>
         </div>
-        
+
     </div>
 
 
-     <!-- The Modal -->
-     <div id="id01" class="modal">
+
+    <!-- 購物車彈出視窗 左側欄 -->
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
+    
+    <!-- The Modal -->
+    <div id="id01" class="modal">
         <span onclick="document.getElementById('id01').style.display='none'" class="close"
             title="Close Modal">&times;</span>
 
@@ -119,37 +141,40 @@
             </div>
 
             <div class="container btuser">
-                
-                    <span class="psw">忘記 <a href="#">密碼</a></span>
-                    <div class="btuserflex">
-                        <button type="button" onclick="document.getElementById('id01').style.display='none'"
-                            class="cancelbtn">取消</button>
-                        <button type="submit">登入</button>
-                    </div>
-                
+
+                <span class="psw">
+                    <a href="#" style="color: #3a5a40;">忘記密碼</a>
+                    <a href="#" style="color: #3a5a40;">註冊會員</a>
+                </span>
+                <div class="btuserflex">
+                    <button type="button" onclick="document.getElementById('id01').style.display='none'"
+                        class="cancelbtn">取消</button>
+                    <button type="submit">登入</button>
+                </div>
+
             </div>
         </form>
     </div>
 
-  <!-- script Get the modal -->
-  <script>
-    // Get the modal
-    var modal = document.getElementById('id01');
+    <!-- script Get the modal -->
+    <script>
+        // Get the modal
+        var modal = document.getElementById('id01');
 
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function (event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
         }
-    }
-</script>
+    </script>
 
 
 
     <!-- 頁尾 -->
     <footer>
         <!-- 分成四欄 -->
-        <div class="bt-flex" >
+        <div class="bt-flex">
             <!-- 放LOGO圖連結 -->
             <div>
                 <a href="index.html" class="logocolor logosize">Früshstück芙舒可早午餐
@@ -157,14 +182,14 @@
                 </a>
             </div>
 
-            
-            
+
+
             <!-- 聯絡方式 信箱電話連結 -->
             <div>
                 <h3 class="col344e41">聯絡方式</h3>
                 <ul>
                     <li>
-                        
+
                         <p class="col344e41"><i class="fa-solid fa-envelope"></i> service@fruhstuck.com</p>
                     </li>
                     <li>
@@ -182,7 +207,7 @@
                 </div>
             </div>
         </div>
-        
+
         <!-- 版權所有 -->
         <div class="bt-center">
             <p class="colgray">copyright &copy; 芙舒可早午餐版權所有. All rights reserved.</p>
