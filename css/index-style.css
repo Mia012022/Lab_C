@@ -1,0 +1,244 @@
+/* Slideshow container */
+.slideshow-container {
+
+  height: 650px;
+  position: relative;
+  margin: auto;
+  overflow: hidden;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: #a3b18a;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 3.0s;
+}
+
+@keyframes fade {
+  from {
+    opacity: .4
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+
+
+/*
+  .imgtransition:hover {
+    transform: scale(1.5);
+    transition: 0.5s;
+  }*/
+
+.midbigsquare {
+  background-image: url(../img/salad.jpg);
+  background-size: cover;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*中間文章文字置中*/
+.midtext {
+  text-align: center;
+  line-height: 40px;
+  color: #588157;
+  font-weight: 700;
+
+}
+
+.midsquare {
+  display: flex;
+}
+
+h3 {
+  border-bottom: 3px solid #588157;
+}
+
+.midsq {
+  color: #344e41;
+  width: 33.33%;
+  padding: 40px;
+  margin: 70px;
+  text-align: center;
+  font-weight: 700;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.7)
+}
+
+/*方格圖塊*/
+.grid {
+  width: 70%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 33.33% 33.33% 33.33%;
+
+
+}
+
+.gridborder {
+  background-color: #588157;
+  margin: 3px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  color: white;
+}
+
+.gridborder:hover {
+  transform: scale(1.2);
+  transition: 0.5s;
+
+}
+
+/*最新消息*/
+.news {
+  margin-top: 10px;
+  background-color: #588157;
+  padding: 10px;
+}
+
+.new {
+  margin: 10px;
+  background-color: white;
+}
+
+.titleRegion {
+  height: 50px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #344e41;
+  text-align: center;
+  border-bottom: 1px solid #dddddd;
+
+}
+
+.infoItem {
+  width: 100%;
+  min-height: 70px;
+  padding: 20px 0px;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  color: #344e41;
+  border-bottom: 1px solid #dddddd;
+}
+
+.infoItem a {
+  display: flex;
+  align-items: center;
+  color: #344e41;
+  text-decoration: none;
+}
+
+.infoItem a:hover {
+  color: #999999;
+}
+
+.date {
+  width: 100px;
+  margin-left: 50px;
+  color: #999999;
+}
+
+.type {
+  width: 200px;
+  margin-left: 50px;
+  color: #999999;
+}
+
+.newstext {
+  display: block;
+}
+
+.titleEnd {
+  height: 50px;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  padding: 10px;
+}
+
+.titleEnd a {
+  color: #344e41;
+}
+
+.titleEnd a:hover {
+  color: #717171;
+}

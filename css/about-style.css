@@ -1,0 +1,26 @@
+.title{
+    background-image: url(../img/title.png);
+    background-repeat: no-repeat;
+    
+    width: 100%;
+    height: 200px;
+    position: relative;
+    
+  
+}
+.titletext{
+    font-size: 70px;
+    color: aliceblue;
+    position: absolute;
+   left: 80px;
+    top: 25%;
+}
+.midright{
+    margin: 10px;
+}
+.midtext{
+    line-height: 40px;
+    padding: 30px;
+    font-size: 20px;
+    color: #344e41;
+}
