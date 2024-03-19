@@ -180,14 +180,14 @@
                     </ul>
                 </div>
 
-                <div class="tab">
-                    <button class="tablinks" onclick="openCity(event, 'plate')">拼盤</button>
-                    <button class="tablinks" onclick="openCity(event, 'croissant')">可頌</button>
-                    <button class="tablinks" onclick="openCity(event, 'noodle')">麵食</button>
-                    <button class="tablinks" onclick="openCity(event, 'fried')">炸物</button>
-                    <button class="tablinks" onclick="openCity(event, 'Ttoast')">厚片土司</button>
-                    <button class="tablinks" onclick="openCity(event, 'pasta')">義大利麵</button>
-                    <button class="tablinks" onclick="openCity(event, 'salad')">沙拉</button>
+                <div class="tab tableft">
+                    <button class="tablinks" onclick="openMenu(event, 'plate')" style="background-color: #edbb6a;">拼盤</button>
+                    <button class="tablinks" onclick="openMenu(event, 'croissant')" style="background-color: red;">可頌</button>
+                    <button class="tablinks" onclick="openMenu(event, 'noodle')" style="background-color: brown;">麵食</button>
+                    <button class="tablinks" onclick="openMenu(event, 'fried')" style="background-color: yellow;">炸物</button>
+                    <button class="tablinks" onclick="openMenu(event, 'Ttoast')" style="background-color: brown;">厚片土司</button>
+                    <button class="tablinks" onclick="openMenu(event, 'pasta')" style="background-color: green;">義大利麵</button>
+                    <button class="tablinks" onclick="openMenu(event, 'salad')" style="background-color: #edbb6a;">沙拉</button>
                 </div>
 
             </div>
@@ -195,14 +195,14 @@
         <!-- 右邊 -->
         <div class="midright">
 
-            <div class="tab">
-                <button class="tablinks" onclick="openCity(event, 'polo')">菠蘿堡</button>
-                <button class="tablinks" onclick="openCity(event, 'burger')">美式漢堡</button>
-                <button class="tablinks" onclick="openCity(event, 'chineseomelet')">蛋餅</button>
-                <button class="tablinks" onclick="openCity(event, 'toast')">吐司</button>
-                <button class="tablinks" onclick="openCity(event, 'drink')">飲品咖啡</button>
-                <button class="tablinks" onclick="openCity(event, 'rice')">燉飯</button>
-                <button class="tablinks" onclick="openCity(event, 'dessert')">甜點</button>
+            <div class="tab tabright">
+                <button class="tablinks" onclick="openMenu(event, 'polo')" style="background-color: #edbb6a;">菠蘿堡</button>
+                <button class="tablinks" onclick="openMenu(event, 'burger')" style="background-color: red;">美式漢堡</button>
+                <button class="tablinks" onclick="openMenu(event, 'chineseomelet')" style="background-color: brown;">蛋餅</button>
+                <button class="tablinks" onclick="openMenu(event, 'toast')" style="background-color: yellow;">吐司</button>
+                <button class="tablinks" onclick="openMenu(event, 'drink')" style="background-color: brown;">飲品咖啡</button>
+                <button class="tablinks" onclick="openMenu(event, 'rice')" style="background-color: green;">燉飯</button>
+                <button class="tablinks" onclick="openMenu(event, 'dessert')" style="background-color: #edbb6a;">甜點</button>
 
             </div>
 
@@ -336,9 +336,9 @@
     </div>
 
 
-    <!-- Hover Tabs -->
+    <!-- Hover Tabs  菜單打開-->
     <script>
-        function openCity(evt, cityName) {
+        function openMenu(evt, menuName) {
             // Declare all variables
             var i, tabcontent, tablinks;
 
@@ -355,7 +355,7 @@
             }
 
             // Show the current tab, and add an "active" class to the link that opened the tab
-            document.getElementById(cityName).style.display = "block";
+            document.getElementById(menuName).style.display = "block";
             evt.currentTarget.className += " active";
         }
     </script>

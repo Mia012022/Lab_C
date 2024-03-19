@@ -23,3 +23,10 @@
     font-size: 20px;
     color: #344e41;
 }
+.middle{
+    margin-top: 20px;
+}
+.midimg img{
+    border-radius: 10px;
+    opacity: 0.8;
+}

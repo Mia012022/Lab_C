@@ -18,23 +18,32 @@
 .tab {
     float: left;
     
-    background-color: #a3b18a ;
-    width: 100px;
+    
+    width: 210px;
     
   }
   
   /* Style the buttons that are used to open the tab content */
   .tab button {
     display: block;
-    background-color: inherit;
+    background-color: #a3b18a ;
     color: black;
+    font-size: 20px;
+    font-weight: 700;
     padding: 22px 16px;
-    width: 100%;
+   width: 100%;
     border: none;
     outline: none;
-    text-align: left;
     cursor: pointer;
     text-align: center;
+    
+    
+  }
+  .tableft button{
+    border-radius: 80px 0px 0px 40px;
+  }
+  .tabright button{
+    border-radius: 0px 80px 40px 0px;
   }
   
   /* Change background color of buttons on hover */
@@ -55,13 +64,23 @@
     padding: 0px 12px;
     border: 1px solid #3a5a40 ;
     width: 300px;
+    height: 493px;
+    line-height: 25px;
+    border-radius: 5px;
+    background-color: white;
+    opacity: 0.9;
    
     
     display: none;
   }
   .middle{
+    border-radius: 180px 180px 0px 0px;
     height: 800px;
     margin-top: 20px;
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+    
   }
 .midfloatright{
     float: right;
