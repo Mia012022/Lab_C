@@ -138,60 +138,73 @@
             <div class="product">
                 <div class="position-relative">
                     <img src="img/burg01.png" alt="" class="w-100">
-                    <p><a href="">雙層厚豬芝士堡</a></p>
+                    <p class="bt-pro-flex"><button onclick="document.getElementById('id02').style.display='block'"
+                            class="bt-pro">雙層厚豬芝士堡 <i class="fa-solid fa-plus"></i></button></p>
                     <div class="tag position-absolute">Hot</div>
                 </div>
             </div>
             <div class="product">
                 <div class="position-relative">
                     <img src="img/burg02.png" alt="" class="w-100">
-                    <p><a href="">元氣豬肉芝士堡</a></p>
+                    <p class="bt-pro-flex"><button onclick="document.getElementById('id02').style.display='block'"
+                            class="bt-pro">元氣豬肉芝士堡 <i class="fa-solid fa-plus"></i></button></p>
                     <div class="tag position-absolute">Hot</div>
                 </div>
             </div>
             <div class="product">
                 <img src="img/burg03.png" alt="" class="w-100">
-                <p><a href="">鐵板雞排芝士堡</a></p>
+                <p class="bt-pro-flex"><button onclick="document.getElementById('id02').style.display='block'"
+                        class="bt-pro">鐵板雞排芝士堡 <i class="fa-solid fa-plus"></i></button></p>
             </div>
             <div class="product">
                 <img src="img/burg04.png" alt="" class="w-100">
-                <p><a href="">培根厚牛芝士堡</a></p>
+                <p class="bt-pro-flex"><button onclick="document.getElementById('id02').style.display='block'"
+                        class="bt-pro">培根厚牛芝士堡 <i class="fa-solid fa-plus"></i></button></p>
             </div>
             <div class="product">
                 <img src="img/burg05.png" alt="" class="w-100">
-                <p><a href="">塔塔醬魚排芝士堡</a></p>
+                <p class="bt-pro-flex"><button onclick="document.getElementById('id02').style.display='block'"
+                        class="bt-pro">塔塔醬魚排芝士堡 <i class="fa-solid fa-plus"></i></button></p>
             </div>
             <div class="product">
                 <img src="img/burg06.png" alt="" class="w-100">
-                <p><a href="">卡啦雞腿芝士堡(原味)</a></p>
+                <p class="bt-pro-flex"><button onclick="document.getElementById('id02').style.display='block'"
+                        class="bt-pro">卡啦雞腿芝士堡(原味) <i class="fa-solid fa-plus"></i></button></p>
             </div>
             <div class="product">
                 <img src="img/burg07.png" alt="" class="w-100">
-                <p><a href="">墨西哥蝦排芝士堡</a></p>
+                <p class="bt-pro-flex"><button onclick="document.getElementById('id02').style.display='block'"
+                        class="bt-pro">墨西哥蝦排芝士堡 <i class="fa-solid fa-plus"></i></button></p>
             </div>
             <div class="product">
                 <img src="img/burg08.png" alt="" class="w-100">
-                <p><a href="">墨西哥卡啦雞腿芝士堡(辣)</a></p>
+                <p class="bt-pro-flex"><button onclick="document.getElementById('id02').style.display='block'"
+                        class="bt-pro">墨西哥卡啦雞腿芝士堡(辣) <i class="fa-solid fa-plus"></i></button></p>
             </div>
             <div class="product">
                 <img src="img/burg09.png" alt="" class="w-100">
-                <p><a href="">香煎腿排芝士堡</a></p>
+                <p class="bt-pro-flex"><button onclick="document.getElementById('id02').style.display='block'"
+                        class="bt-pro">香煎腿排芝士堡 <i class="fa-solid fa-plus"></i></button></p>
             </div>
             <div class="product">
                 <img src="img/burg10.png" alt="" class="w-100">
-                <p><a href="">花醬培根厚牛芝士堡</a></p>
+                <p class="bt-pro-flex"><button onclick="document.getElementById('id02').style.display='block'"
+                        class="bt-pro">花醬培根厚牛芝士堡 <i class="fa-solid fa-plus"></i></button></p>
             </div>
             <div class="product">
                 <img src="img/burg11.png" alt="" class="w-100">
-                <p><a href="">雙層厚牛芝士堡</a></p>
+                <p class="bt-pro-flex"><button onclick="document.getElementById('id02').style.display='block'"
+                        class="bt-pro">雙層厚牛芝士堡 <i class="fa-solid fa-plus"></i></button></p>
             </div>
             <div class="product">
                 <img src="img/burg12.png" alt="" class="w-100">
-                <p><a href="">芥末黃瓜牛肉芝士堡</a></p>
+                <p class="bt-pro-flex"><button onclick="document.getElementById('id02').style.display='block'"
+                        class="bt-pro">芥末黃瓜牛肉芝士堡 <i class="fa-solid fa-plus"></i></button></p>
             </div>
             <div class="product">
                 <img src="img/burg13.png" alt="" class="w-100">
-                <p><a href="">醬汁燒肉芝士堡</a></p>
+                <p class="bt-pro-flex"><button onclick="document.getElementById('id02').style.display='block'"
+                        class="bt-pro">醬汁燒肉芝士堡 <i class="fa-solid fa-plus"></i></button></p>
             </div>
         </div>
         <!-- 產品列表   end -->
@@ -252,6 +265,53 @@
 
 
 
+
+    <!-- 線上訂餐 產品數量 彈出視窗 中間欄 -->
+    <div id="id02" class="modal">
+        <span onclick="document.getElementById('id02').style.display='none'" class="close"
+            title="Close Modal">&times;</span>
+        <form class="modal-content animate" action="">
+            <div class="imgcontainer">
+                <div class="imgcircle">Order</div>
+            </div>
+            <div class="container">
+                <div class="od_product">
+                    <p>請選擇數量</p>
+                    <select name="amout" id="amout">
+                        <option>數量</option>
+                        <option>1個</option>
+                        <option>2個</option>
+                        <option>3個</option>
+                        <option>4個</option>
+                        <option>5個</option>
+                    </select>
+                </div>
+
+            </div>
+            <!-- 線上訂餐 取消 確認鍵 -->
+            <div class="container btuser">
+                <div class="btuserflex">
+                    <button type="button" onclick="document.getElementById('id02').style.display='none'"
+                        class="cancelbtn">取消</button>
+                    <button type="submit">確認</button>
+                </div>
+
+            </div>
+        </form>
+    </div>
+
+
+    <!-- 線上訂餐 產品數量 彈出視窗 中間欄 -->
+    <script>
+        var modal = document.getElementById('id02');
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
 
 
     <!-- script Get the modal 彈出視窗-->
