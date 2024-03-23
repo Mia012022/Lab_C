@@ -15,44 +15,33 @@
   width: 100%;
 }
 /* Style the tab */
-.tab {
-    float: left;
-    
-    
-    width: 210px;
-    
-  }
-  
+.tab{
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 5px;
+  background-color: #3a5a40;
+}
   /* Style the buttons that are used to open the tab content */
   .tab button {
-    display: block;
-    background-color: #a3b18a ;
-    color: black;
-    font-size: 20px;
-    font-weight: 700;
-    padding: 22px 16px;
-   width: 100%;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    text-align: center;
+    background-color: #3a5a40;
     color: white;
-    
-    
+    font-size: 20px;
+    font-weight: 500;
+    padding: 22px 16px;
+   border: none;
+    outline: none;
+    text-align: center;
+    border-radius: 5px;
+    width: 20%;
   }
   
-  .tableft button{
-    border-radius: 80px 0px 0px 40px;
-  }
-  .tabright button{
-    border-radius: 0px 80px 40px 0px;
-  }
+ 
  
   
   /* Change background color of buttons on hover */
   .tab button:hover {
     background-color: #588157 ;
-    color: black;
+    color: lightcyan;
   }
   
   /* Create an active/current "tab button" class */
@@ -64,38 +53,25 @@
   
   /* Style the tab content */
   .tabcontent {
-    float: left;
-    padding: 0px 12px;
-    border: 1px solid #3a5a40 ;
-    width: 300px;
-    height: 493px;
-    line-height: 25px;
-    border-radius: 5px;
-    background-color: white;
-    opacity: 0.9;
-   
     
-    display: none;
+    font-size: 25px;
+    text-align: center;
+    line-height: 40px;
   }
   .middle{
-    
-    height: 800px;
-   
+    display: block;
+  
+    width: 60%;
+    margin: auto;
     background-color: #d8e1c6;
-    
-   
-    
+    box-shadow:  3px 5px 0px rgba(0,0,0,0.38);
+    margin-bottom: 20px;
+    margin-top: 40px;
+    border-radius: 5px;
   }
-.midfloatright{
-    float: right;
-}
-.midleft{
-  margin-top: 10px;
-    width: 50%;
-}
-.midright{
-  margin-top:10px ;
-}
+
+
+
 .midtop{
   height: 750px;
   display: flex;
@@ -110,92 +86,6 @@
   box-sizing: border-box;
 }
 
-/* Position the image container (needed to position the left and right arrows) */
-.containermid {
-  position: relative;
-  width: 40%;
-  
-}
-
-/* Hide the images by default */
-.mySlides {
-  display: none;
-  
- 
-}
-
-/* Add a pointer when hovering over the thumbnail images */
-.cursor {
-  cursor: pointer;
-}
-
-/* Next & previous buttons */
-.prev,
-.next {
-  cursor: pointer;
-  position: absolute;
-  top: 40%;
-  width: auto;
-  padding: 16px;
-  margin-top: -50px;
-  color: #3a5a40;
-  font-weight: bold;
-  font-size: 20px;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-  -webkit-user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover,
-.next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
-/* Container for image text */
-.caption-container {
-  text-align: center;
-  background-color: #234b2e;
-  padding: 2px 16px;
-  color: white;
-}
-
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Six columns side by side */
-.column {
-  float: left;
-  width: 16.66%;
-}
-
-/* Add a transparency effect for thumnbail images */
-.demo {
-  opacity: 0.6;
-}
-
-.active,
-.demo:hover {
-  opacity: 1;
-}
 
 .hh3{
   display: flex;
