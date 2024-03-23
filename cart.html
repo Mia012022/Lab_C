@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,11 +8,12 @@
     <style>
         .required {
             color: red;
-            font-size: 20px;
-            margin-right: 5px;
+            font-size: 10px;
+
         }
     </style>
 </head>
+
 <body>
     <form id="loginForm">
         <label for="username"><span class="required">*</span> Username:</label>
@@ -24,9 +26,35 @@
 
         <button type="button" id="loginButton">Login</button>
     </form>
+    <br>
+    <div>
+        <button id="decrease">減少</button>
+        <input type="number" id="number" value="0"></input>
+        <button id="add">增加</button>
+
+    </div>
+
 
     <script>
-        document.getElementById('loginButton').addEventListener('click', function() {
+        const decrease = document.getElementById('decrease');
+        const add = document.getElementById('add');
+        const number = document.getElementById('number');
+        let num = parseInt(number.value);
+        add.onclick = function () {
+
+            num++;
+            number.value = num;
+        }
+        decrease.onclick = function () {
+            num--;
+            number.value = num;
+        }
+
+
+    </script>
+
+    <script>
+        document.getElementById('loginButton').addEventListener('click', function () {
             // 獲取帳號和密碼輸入框的值
             const username = document.getElementById('username').value.trim();
             const password = document.getElementById('password').value.trim();
@@ -51,4 +79,5 @@
         });
     </script>
 </body>
+
 </html>

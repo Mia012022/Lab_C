@@ -83,7 +83,7 @@
                 <div class="dropdown-container">
                     <ul>
                         <li><a href="order.html">拼盤</a></li>
-                        <li><a href="od_burger.html">美式漢堡</a></li>
+                        <li><a href="order_burger.html">美式漢堡</a></li>
                     </ul>
                 </div>
                 <button class="dropdown-btn">西式餐點
@@ -135,46 +135,33 @@
         <!-- 產品列表  start -->
         <div class="midright">
             <div class="product">
-                <div class="position-relative">
-                    <img src="img/pin01.png" alt="" class="w-100">
-                    <p class="bt-pro-flex"><button onclick="document.getElementById('id02').style.display='block'"
-                            class="bt-pro">古早味炒麵佐蘿蔔糕 <i class="fa-solid fa-plus"></i></button></p>
-                    <div class="tag position-absolute">Hot</div>
-
-                </div>
+                <img src="img/pin01.png" alt="" class="w-100">
+                
+                    <div class="bt-pro-flex">古早味炒麵佐蘿蔔糕</div>
             </div>
             <div class="product">
-                <div class="position-relative">
-                    <img src="img/pin02.png" alt="" class="w-100">
-                    <p class="bt-pro-flex"><button onclick="document.getElementById('id02').style.display='block'"
-                            class="bt-pro">鮮奶山峰厚片拼盤 <i class="fa-solid fa-plus"></i></button></p>
-                    <div class="tag position-absolute">Hot</div>
-                </div>
+                <img src="img/pin02.png" alt="" class="w-100">
+                <p class="bt-pro-flex">鮮奶山峰厚片拼盤</button></p>
             </div>
             <div class="product">
                 <img src="img/pin03.png" alt="" class="w-100">
-                <p class="bt-pro-flex"><button onclick="document.getElementById('id02').style.display='block'"
-                        class="bt-pro">Blue-Plate綜合炸物佐沙拉 <i class="fa-solid fa-plus"></i></button></p>
+                <p class="bt-pro-flex">Blue-Plate綜合炸物佐沙拉</p>
             </div>
             <div class="product">
                 <img src="img/pin04.png" alt="" class="w-100">
-                <p class="bt-pro-flex"><button onclick="document.getElementById('id02').style.display='block'"
-                        class="bt-pro">美式牛肉佐鱈魚海陸拼盤 <i class="fa-solid fa-plus"></i></button></p>
+                <p class="bt-pro-flex">美式牛肉佐鱈魚海陸拼盤</p>
             </div>
             <div class="product">
                 <img src="img/pin05.png" alt="" class="w-100">
-                <p class="bt-pro-flex"><button onclick="document.getElementById('id02').style.display='block'"
-                        class="bt-pro">厚牛起司堡雞塊拼盤 <i class="fa-solid fa-plus"></i></button></p>
+                <p class="bt-pro-flex">厚牛起司堡雞塊拼盤</p>
             </div>
             <div class="product">
                 <img src="img/pin06.png" alt="" class="w-100">
-                <p class="bt-pro-flex"><button onclick="document.getElementById('id02').style.display='block'"
-                        class="bt-pro">雙泥沙拉炒蛋佐蘿蔔糕 <i class="fa-solid fa-plus"></i></button></p>
+                <p class="bt-pro-flex">雙泥沙拉炒蛋佐蘿蔔糕</p>
             </div>
             <div class="product">
                 <img src="img/pin07.png" alt="" class="w-100">
-                <p class="bt-pro-flex"><button onclick="document.getElementById('id02').style.display='block'"
-                        class="bt-pro">田野培根薯餅可頌佐沙拉 <i class="fa-solid fa-plus"></i></button></p>
+                <p class="bt-pro-flex">田野培根薯餅可頌佐沙拉</p>
             </div>
         </div>
         <!-- 產品列表   end -->
@@ -221,61 +208,7 @@
         </form>
     </div>
 
-    <!-- 線上訂餐 產品數量 彈出視窗 中間欄 -->
-    <div id="id02" class="modal">
-        <span onclick="document.getElementById('id02').style.display='none'" class="close"
-            title="Close Modal">&times;</span>
-        <form class="modal-content animate" action="">
-            <div class="imgcontainer">
-                <div class="imgcircle">Order</div>
-            </div>
-            <div class="container">
-                <div class="od_product">
-                    <p>請選擇數量</p>
-                    <select name="amout" id="amout">
-                        <option>數量</option>
-                        <option>1個</option>
-                        <option>2個</option>
-                        <option>3個</option>
-                        <option>4個</option>
-                        <option>5個</option>
-                    </select>
-                </div>
 
-            </div>
-            <!-- 線上訂餐 取消 確認鍵 -->
-            <div class="container btuser">
-                <div class="btuserflex">
-                    <button type="button" onclick="document.getElementById('id02').style.display='none'"
-                        class="cancelbtn">取消</button>
-                    <button type="submit" onclick="amoutsubmit()">確認</button>
-                </div>
-
-            </div>
-        </form>
-    </div>
-    <!-- 數量確認視窗 -->
-    <script>
-        function amoutsubmit(){
-           
-            alert("添加至購物車");
-        }
-        
-        
-        
-    </script>
-
-    <!-- 線上訂餐 產品數量 彈出視窗 中間欄 -->
-    <script>
-        var modal = document.getElementById('id02');
-
-        // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function (event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
-    </script>
 
     <!-- 購物車彈出視窗 左側欄 -->
     <script>
@@ -318,6 +251,9 @@
             });
         }
     </script>
+    <!-- 訂餐 數量 -->
+   
+
 
     <!-- 頁尾 -->
     <footer>
