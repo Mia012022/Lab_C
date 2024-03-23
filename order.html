@@ -56,7 +56,13 @@
     <!-- 購物車左側欄 -->
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <div style="color: white;">購物車是空的</div>
+        <div>
+            <ul id="cartItems">
+
+            </ul>
+        </div>
+        <p>Total Quantity: <span id="totalQuantity">0</span></p>
+        <p>Total Price: $<span id="totalPrice">0</span></p>
 
     </div>
 
@@ -136,32 +142,115 @@
         <div class="midright">
             <div class="product">
                 <img src="img/pin01.png" alt="" class="w-100">
-                
-                    <div class="bt-pro-flex">古早味炒麵佐蘿蔔糕</div>
+
+                <div class="bt-pro-flex">古早味炒麵佐蘿蔔糕</div>
+                <div class="bt-pro-flex">
+                    <div>
+                        <button id="decreaseButton" class="decreaseCart" data-product="古早味炒麵佐蘿蔔糕" data-price="60">
+                            <i class="fa-solid fa-minus"></i>
+                        </button>
+                        <input type="text" id="numberInput" value="0" style="width: 40px; text-align: center;">
+                        <button id="addButton" class="addToCartButton" data-product="古早味炒麵佐蘿蔔糕" data-price="60">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+
+                    </div>
+                </div>
             </div>
             <div class="product">
                 <img src="img/pin02.png" alt="" class="w-100">
-                <p class="bt-pro-flex">鮮奶山峰厚片拼盤</button></p>
+                <div class="bt-pro-flex">鮮奶山峰厚片拼盤</button></div>
+                <div class="bt-pro-flex">
+                    <div>
+                        <button id="decreaseButton02" class="decreaseCart" data-product="鮮奶山峰厚片拼盤" data-price="70">
+                            <i class="fa-solid fa-minus"></i>
+                        </button>
+                        <input type="text" id="numberInput02" value="0" style="width: 40px; text-align: center;">
+                        <button id="addButton02" class="addToCartButton" data-product="鮮奶山峰厚片拼盤" data-price="70">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
             </div>
             <div class="product">
                 <img src="img/pin03.png" alt="" class="w-100">
-                <p class="bt-pro-flex">Blue-Plate綜合炸物佐沙拉</p>
+                <div class="bt-pro-flex">Blue-Plate綜合炸物佐沙拉</div>
+                <div class="bt-pro-flex">
+                    <div>
+                        <button id="decreaseButton03">
+                            <i class="fa-solid fa-minus"></i>
+                        </button>
+                        <input type="text" id="numberInput03" value="0" style="width: 40px; text-align: center;">
+                        <button id="addButton03">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+
+                    </div>
+                </div>
             </div>
             <div class="product">
                 <img src="img/pin04.png" alt="" class="w-100">
-                <p class="bt-pro-flex">美式牛肉佐鱈魚海陸拼盤</p>
+                <div class="bt-pro-flex">美式牛肉佐鱈魚海陸拼盤</div>
+                <div class="bt-pro-flex">
+                    <div>
+                        <button id="decreaseButton04">
+                            <i class="fa-solid fa-minus"></i>
+                        </button>
+                        <input type="text" id="numberInput04" value="0" style="width: 40px; text-align: center;">
+                        <button id="addButton04">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+
+                    </div>
+                </div>
             </div>
             <div class="product">
                 <img src="img/pin05.png" alt="" class="w-100">
-                <p class="bt-pro-flex">厚牛起司堡雞塊拼盤</p>
+                <div class="bt-pro-flex">厚牛起司堡雞塊拼盤</div>
+                <div class="bt-pro-flex">
+                    <div>
+                        <button id="decreaseButton05">
+                            <i class="fa-solid fa-minus"></i>
+                        </button>
+                        <input type="text" id="numberInput05" value="0" style="width: 40px; text-align: center;">
+                        <button id="addButton05">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+
+                    </div>
+                </div>
             </div>
             <div class="product">
                 <img src="img/pin06.png" alt="" class="w-100">
-                <p class="bt-pro-flex">雙泥沙拉炒蛋佐蘿蔔糕</p>
+                <div class="bt-pro-flex">雙泥沙拉炒蛋佐蘿蔔糕</div>
+                <div class="bt-pro-flex">
+                    <div>
+                        <button id="decreaseButton06">
+                            <i class="fa-solid fa-minus"></i>
+                        </button>
+                        <input type="text" id="numberInput06" value="0" style="width: 40px; text-align: center;">
+                        <button id="addButton06">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+
+                    </div>
+                </div>
             </div>
             <div class="product">
                 <img src="img/pin07.png" alt="" class="w-100">
-                <p class="bt-pro-flex">田野培根薯餅可頌佐沙拉</p>
+                <div class="bt-pro-flex">田野培根薯餅可頌佐沙拉</div>
+                <div class="bt-pro-flex">
+                    <div>
+                        <button id="decreaseButton07">
+                            <i class="fa-solid fa-minus"></i>
+                        </button>
+                        <input type="text" id="numberInput07" value="0" style="width: 40px; text-align: center;">
+                        <button id="addButton07">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+
+                    </div>
+                </div>
             </div>
         </div>
         <!-- 產品列表   end -->
@@ -213,7 +302,7 @@
     <!-- 購物車彈出視窗 左側欄 -->
     <script>
         function openNav() {
-            document.getElementById("mySidenav").style.width = "250px";
+            document.getElementById("mySidenav").style.width = "300px";
         }
 
         function closeNav() {
@@ -252,8 +341,8 @@
         }
     </script>
     <!-- 訂餐 數量 -->
-   
-
+    <script src="addAmout.js"></script>
+    <script src="cartItems.js"></script>
 
     <!-- 頁尾 -->
     <footer>
