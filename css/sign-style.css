@@ -1,0 +1,80 @@
+.title {
+    width: 100%;
+    height: 200px;
+    margin-top: 60px;
+}
+
+.titletext {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    font-size: 60px;
+    color: aliceblue;
+    background-image: url(../img/greenmodal02.png);
+    padding-left: 10px;
+    width: 100%;
+}
+
+.middle {
+    margin: 20px;
+
+}
+
+.midright {
+    margin-left: 20px;
+    width: 80%;
+}
+
+.midtext {
+    line-height: 40px;
+    color: #344e41;
+    width: 80%;
+    font-weight: 600;
+
+}
+
+input[type="text"],
+input[type="email"] ,
+input[type="password"],select
+{
+
+    width: 100%;
+    padding: 10px 8px;
+    border: 1px solid rgb(20, 65, 35);
+    border-radius: 4px;
+    margin-bottom: 20px;
+    
+}
+
+
+input[type="submit"],input[type="reset"] {
+    border: none;
+    background-color: #588157;
+    padding: 5px;
+    width: 100px;
+    border-radius: 4px;
+    margin: 20px;
+    color: white;
+    cursor: pointer;
+
+    font-size: 18px;
+}
+
+input[type="submit"]:hover {
+    background-color: #a3b18a;
+}
+
+.insubmit {
+    display: flex;
+    justify-content: right;
+}
+.formflex{
+    display: flex;
+    width: 100%;
+}
+
+.selectBox select{
+    width: 304px;
+    margin-right: 5px;
+}

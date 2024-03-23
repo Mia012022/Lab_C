@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <style>
+        .required {
+            color: red;
+            font-size: 20px;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <form id="loginForm">
+        <label for="username"><span class="required">*</span> Username:</label>
+        <input type="text" id="username" name="username"><br>
+        <div id="usernameError" style="color: red;"></div><br>
+
+        <label for="password"><span class="required">*</span> Password:</label>
+        <input type="password" id="password" name="password"><br>
+        <div id="passwordError" style="color: red;"></div><br>
+
+        <button type="button" id="loginButton">Login</button>
+    </form>
+
+    <script>
+        document.getElementById('loginButton').addEventListener('click', function() {
+            // 獲取帳號和密碼輸入框的值
+            const username = document.getElementById('username').value.trim();
+            const password = document.getElementById('password').value.trim();
+
+            // 刪除之前的錯誤訊息
+            document.getElementById('usernameError').textContent = '';
+            document.getElementById('passwordError').textContent = '';
+
+            // 判斷是否有欄位空白
+            if (username === '') {
+                document.getElementById('usernameError').textContent = 'Please enter your username.';
+            }
+            if (password === '') {
+                document.getElementById('passwordError').textContent = 'Please enter your password.';
+            }
+
+            if (username !== '' && password !== '') {
+                // 如果都有填寫，這裡可以繼續執行登入的相關操作
+                // 例如發送登入請求等等
+                alert('Login successful!');
+            }
+        });
+    </script>
+</body>
+</html>

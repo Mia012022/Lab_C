@@ -1,0 +1,90 @@
+.title{
+    background-image: url(../img/title.png);
+    background-repeat: no-repeat;
+    
+    width: 100%;
+    height: 200px;
+    position: relative;
+    
+  
+}
+.titletext{
+    font-size: 70px;
+    color: aliceblue;
+    position: absolute;
+   left: 80px;
+    top: 25%;
+}
+.midleft{
+    width: 200px;
+    background-color: rgb(59, 126, 102);
+}
+.middle{
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+}
+.midright{
+    display: flex;
+    
+}
+.product{
+    width: 200px;
+    margin: 10px;
+}
+.w-100{
+    width: 200px;
+}
+
+/* Fixed sidenav, full height */
+
+  
+  /* Style the sidenav links and the dropdown button */
+  .sidenav a, .dropdown-btn {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    display: block;
+    border: none;
+    background: none;
+    width:100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  /* On mouse-over */
+  .sidenav a:hover, .dropdown-btn:hover {
+    color: #f1f1f1;
+  }
+  
+  /* Main content */
+  .main {
+    margin-left: 200px; /* Same as the width of the sidenav */
+    font-size: 20px; /* Increased text to enable scrolling */
+    padding: 0px 10px;
+  }
+  
+  /* Add an active class to the active dropdown button */
+  .active {
+    background-color: rgb(27, 85, 61);
+    color: white;
+  }
+  
+  /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+  .dropdown-container {
+    display: none;
+    
+    background-color: #2c8155;
+    padding-left: 8px;
+  }
+  .dropdown-container a{
+    color: white;
+  }
+  
+  /* Optional: Style the caret down icon */
+  .fa-caret-down {
+    float: right;
+    padding-right: 8px;
+  }
