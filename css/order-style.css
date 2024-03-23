@@ -1,7 +1,7 @@
 .title{
   width: 100%;
   height: 200px;
-
+  margin-top: 60px;
 }
 .titletext{
   display: flex;
@@ -16,7 +16,7 @@
 }
 .midleft{
     width: 250px;
-    background-color: rgb(59, 126, 102);
+    background-color: #426051;
 }
 .middle{
     width: 80%;
@@ -40,6 +40,7 @@
 /* Fixed sidenav, full height */
 .sidebar{
   width: 250px;
+  border-radius: 5px;
 }
   
   /* Style the sidenav links and the dropdown button */
@@ -47,7 +48,7 @@
     padding: 6px 8px 6px 16px;
     text-decoration: none;
     font-size: 20px;
-    color: white;
+    color: rgb(244, 235, 235);
     display: block;
     border: none;
     background: none;
@@ -55,11 +56,12 @@
     text-align: left;
     cursor: pointer;
     outline: none;
+    border-radius: 5px;
   }
   
   /* On mouse-over */
   .sidebar a:hover, .dropdown-btn:hover {
-    color: #f1f1f1;
+    color: #200808;
   }
   
   /* Main content */
@@ -71,19 +73,19 @@
   
   /* Add an active class to the active dropdown button */
   .active {
-    background-color: rgb(27, 85, 61);
-    color: white;
+    background-color: #426051;
+    color: rgb(244, 223, 223);
   }
   
   /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
   .dropdown-container {
     display: none;
     
-    background-color: #2c8155;
+    background-color: rgb(131, 223, 184);
     padding-left: 8px;
   }
   .dropdown-container a{
-    color: white;
+    color: rgb(30, 2, 2);
   }
   
   /* Optional: Style the caret down icon */

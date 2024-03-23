@@ -22,7 +22,7 @@
         <header>
             <nav class="container">
                 <!-- 要放logo圖 -->
-                <h1 class="float-left">
+                <h1 class="float-left example">
                     <a href="index.html" class="logocolor">Früshstück芙舒可早午餐
 
                     </a>
@@ -86,14 +86,14 @@
                 <div class="storesearch">
                     <div class="city">
 
-                        <select name="target" id="target">
+                        <select name="cityse" id="cityse">
                             <option>全區</option>
-                            <option>新北市</option>
-                            <option>台北市</option>
-                            <option>桃園市</option>
-                            <option>台中市</option>
-                            <option>台南市</option>
-                            <option>高雄市</option>
+                            <option value="1">新北市</option>
+                            <option value="2">台北市</option>
+                            <option value="3">桃園市</option>
+                            <option value="4">台中市</option>
+                            <option value="5">台南市</option>
+                            <option value="6">高雄市</option>
                         </select>
                     </div>
                     <div class="location">
@@ -105,7 +105,7 @@
                     </div>
                     <div class="searchflex">
                         <div class="searchBox">
-                            <input type="text" placeholder="Search..">
+                            <input type="text" class="light-table-filter" data-table="listse" placeholder="Search..">
                         </div>
                         <div class="searchBtnBox">
                             <button>搜尋</button>
@@ -113,7 +113,86 @@
                     </div>
                 </div>
             </form>
+            <!-- 門市選單搜尋 -->
+            <script>
+                let select = document.querySelector("#cityse");
+                select.addEventListener("change", selectFun);
+                function selectFun() {
+                    const switchValue = select.options[select.selectedIndex].value;
+                    switch (switchValue) {
+                        case "1":
+                            option_01();
+                            break;
+                        case "2":
+                            option_02();
+                            break;
+                        case "3":
+                            option_03();
+                            break;
+                        case "4":
+                            option_04();
+                            break;
+                        case "5":
+                            option_05();
+                            break;
+                        case "6":
+                            option_06();
+                            break;
+                        default:
+                            return;
+                    }
+                }
+                function option_01() {
+                    alert("選到 option_01");
+                }
+            </script>
+            <!-- 門市打字搜尋 -->
+            <script>
+                (function (document) {
+                    'use strict';
 
+                    // 建立 LightTableFilter
+                    var LightTableFilter = (function (Arr) {
+
+                        var _input;
+
+                        // 資料輸入事件處理函數
+                        function _onInputEvent(e) {
+                            _input = e.target;
+                            var tables = document.getElementsByClassName(_input.getAttribute('data-table'));
+                            Arr.forEach.call(tables, function (table) {
+                                Arr.forEach.call(table.tBodies, function (tbody) {
+                                    Arr.forEach.call(tbody.rows, _filter);
+                                });
+                            });
+                        }
+
+                        // 資料篩選函數，顯示包含關鍵字的列，其餘隱藏
+                        function _filter(row) {
+                            var text = row.textContent.toLowerCase(), val = _input.value.toLowerCase();
+                            row.style.display = text.indexOf(val) === -1 ? 'none' : 'table-row';
+                        }
+
+                        return {
+                            // 初始化函數
+                            init: function () {
+                                var inputs = document.getElementsByClassName('light-table-filter');
+                                Arr.forEach.call(inputs, function (input) {
+                                    input.oninput = _onInputEvent;
+                                });
+                            }
+                        };
+                    })(Array.prototype);
+
+                    // 網頁載入完成後，啟動 LightTableFilter
+                    document.addEventListener('readystatechange', function () {
+                        if (document.readyState === 'complete') {
+                            LightTableFilter.init();
+                        }
+                    });
+
+                })(document);
+            </script>
             <!-- 門市資訊表格 -->
             <table class="list">
                 <tr>
@@ -121,86 +200,60 @@
                     <th class="thcolor">地址</th>
                     <th class="thcolor">電話</th>
                 </tr>
-                <tr>
-                    <td>經典門市-台北和平店</td>
-                    <td>臺北市大安區和平東路三段6號</td>
-                    <td>(02)2739-0918</td>
-                </tr>
-                <tr>
-                    <td>經典門市-竹東長春店</td>
-                    <td>新竹縣竹東鎮長春路一段266號</td>
-                    <td>(03)595-5658</td>
-                </tr>
-                <tr>
-                    <td>經典門市-青埔新生店</td>
-                    <td>桃園市大園區新生路四段271號</td>
-                    <td>(03)287-5519</td>
-                </tr>
-                <tr>
-                    <td>經典門市-青埔新生店</td>
-                    <td>桃園市大園區新生路四段271號</td>
-                    <td>(03)287-5519</td>
-                </tr>
-                <tr>
-                    <td>經典門市-青埔新生店</td>
-                    <td>桃園市大園區新生路四段271號</td>
-                    <td>(03)287-5519</td>
-                </tr>
-                <tr>
-                    <td>經典門市-青埔新生店</td>
-                    <td>桃園市大園區新生路四段271號</td>
-                    <td>(03)287-5519</td>
-                </tr>
-                <tr>
-                    <td>經典門市-青埔新生店</td>
-                    <td>桃園市大園區新生路四段271號</td>
-                    <td>(03)287-5519</td>
-                </tr>
-                <tr>
-                    <td>經典門市-青埔新生店</td>
-                    <td>桃園市大園區新生路四段271號</td>
-                    <td>(03)287-5519</td>
-                </tr>
-                <tr>
-                    <td>經典門市-青埔新生店</td>
-                    <td>桃園市大園區新生路四段271號</td>
-                    <td>(03)287-5519</td>
-                </tr>
-                <tr>
-                    <td>經典門市-青埔新生店</td>
-                    <td>桃園市大園區新生路四段271號</td>
-                    <td>(03)287-5519</td>
-                </tr>
-                <tr>
-                    <td>經典門市-青埔新生店</td>
-                    <td>桃園市大園區新生路四段271號</td>
-                    <td>(03)287-5519</td>
-                </tr>
-                <tr>
-                    <td>經典門市-青埔新生店</td>
-                    <td>桃園市大園區新生路四段271號</td>
-                    <td>(03)287-5519</td>
-                </tr>
-                <tr>
-                    <td>經典門市-青埔新生店</td>
-                    <td>桃園市大園區新生路四段271號</td>
-                    <td>(03)287-5519</td>
-                </tr>
-                <tr>
-                    <td>經典門市-青埔新生店</td>
-                    <td>桃園市大園區新生路四段271號</td>
-                    <td>(03)287-5519</td>
-                </tr>
-                <tr>
-                    <td>經典門市-青埔新生店</td>
-                    <td>桃園市大園區新生路四段271號</td>
-                    <td>(03)287-5519</td>
-                </tr>
-                <tr>
-                    <td>經典門市-青埔新生店</td>
-                    <td>桃園市大園區新生路四段271號</td>
-                    <td>(03)287-5519</td>
-                </tr>
+                <table class="list listse">
+                    <tr>
+                        <td>經典門市-台北和平店</td>
+                        <td>台北市大安區和平東路三段6號</td>
+                        <td>(02)2739-0918</td>
+                    </tr>
+                    <tr>
+                        <td>經典門市-青埔新生店</td>
+                        <td >桃園市大園區新生路四段271號</td>
+                        <td>(03)287-5519</td>
+                    </tr>
+                    <tr>
+                        <td>經典門市-桃園藝文門市</td>
+                        <td>桃園市桃園區中埔六街32號</td>
+                        <td>(03)358-7599</td>
+                    </tr>
+                    <tr>
+                        <td>經典門市-三重旗艦門市</td>
+                        <td>新北市三重區重新路五段609巷2-1號</td>
+                        <td>(02)2278-2322</td>
+                    </tr>
+                    <tr>
+                        <td>經典門市-三重重新門市</td>
+                        <td>新北市三重區重新路三段94號</td>
+                        <td>(02)2978-8711</td>
+                    </tr>
+                    <tr>
+                        <td>經典門市-台北橋門市</td>
+                        <td>新北市三重區重新路二段12號</td>
+                        <td>(02)2970-6008</td>
+                    </tr>
+                    <tr>
+                        <td>經典門市-福星公園門市</td>
+                        <td>台中市西屯區河南路2段301巷72號</td>
+                        <td>(04)2452-9143</td>
+                    </tr>
+                    <tr>
+                        <td>經典門市-台中大墩門市</td>
+                        <td>台中市南屯區大墩路806號</td>
+                        <td>(04)2326-2617</td>
+                    </tr>
+                    <tr>
+                        <td>經典門市-台南湖美門市</td>
+                        <td>台南市中西區中華西路二段588號1樓</td>
+                        <td>(06)358-2300</td>
+                    </tr>
+                    <tr>
+                        <td>經典門市-高雄新光門市</td>
+                        <td>高雄市 前鎮區 文橫三路192號</td>
+                        <td>(07)338-6881</td>
+                    </tr>
+
+                </table>
+
             </table>
             <!-- 表格 end -->
         </div>
@@ -227,7 +280,7 @@
         <!-- Modal Content -->
         <form class="modal-content animate" action="">
             <div class="imgcontainer">
-                <div class="imgcircle">USER</div>
+                <div class="imgcircle">登入</div>
             </div>
 
             <div class="container">
@@ -247,7 +300,7 @@
 
                 <span class="psw">
                     <a href="#" style="color: #3a5a40;">忘記密碼</a>
-                    <a href="#" style="color: #3a5a40;">註冊會員</a>
+                    <a href="sign.html" style="color: #3a5a40;">註冊會員</a>
                 </span>
                 <div class="btuserflex">
                     <button type="button" onclick="document.getElementById('id01').style.display='none'"

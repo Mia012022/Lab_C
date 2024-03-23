@@ -25,8 +25,8 @@
         <header>
             <nav class="container">
                 <!-- 要放logo圖 -->
-                <h1 class="float-left">
-                    <a href="index.html" class="logocolor">Früshstück芙舒可早午餐 </a>
+                <h1 class="float-left example">
+                    <a href="index.html" class="logocolor">Früshstück芙舒可早午餐</a>
                 </h1>
                 <!-- 導航目錄 -->
                 <div class="float-left left">
@@ -72,19 +72,19 @@
             <!-- Full-width images with number and caption text -->
             <div class="mySlides fade">
 
-                <img src="img/index-store.jpg" alt="index-store" width="100%" height="650px" class="imgtransition">
+                <img src="img/index-store.jpg" alt="index-store" width="100%" height="1000px" class="imgtransition">
 
             </div>
 
             <div class="mySlides fade">
 
-                <img src="img/index-store01.jpg" alt="index-store" width="100%" height="650px" class="imgtransition">
+                <img src="img/index-store01.jpg" alt="index-store" width="100%" height="1000px" class="imgtransition">
 
             </div>
 
             <div class="mySlides fade">
 
-                <img src="img/index03.png" alt="ndex-store" width="100%" height="650px" class="imgtransition">
+                <img src="img/index03.png" alt="ndex-store" width="100%" height="1000px" class="imgtransition">
 
             </div>
 
@@ -101,7 +101,7 @@
 
         <!-- 文字標語 -->
         <div>
-            <p class="midtext">有妳一起早餐，完整了我的每一天。
+            <p id="new_text" class="midtext">有妳一起早餐，完整了我的每一天。
                 <br>
                 鬆軟漢堡包裡豐富的配料，
                 <br>
@@ -113,6 +113,8 @@
                 <br>與妳。
             </p>
         </div>
+        
+
 
         <!-- 品牌特色介紹 -->
         <div class="midbigsquare">
@@ -136,7 +138,7 @@
         <!-- 回到首頁 固定定位 -->
         <a href="#" class="pagetop">TOP</a>
 
-
+        <a href="order.html" class="pagetop2">線上訂餐限時優惠中</a>
 
 
         <!-- 最新消息 -->
@@ -152,21 +154,21 @@
                         <a href="#">
                             <div class="date">2024/02/14</div>
                             <div class="type">最新活動</div>
-                            <div class="newstext">新上線功能-寄杯領取</div>
+                            <div class="newstext">【大里內新店】門市開幕囉！</div>
                         </a>
                     </div>
                     <div class="infoItem">
                         <a href="#">
                             <div class="date">2024/02/13</div>
                             <div class="type">最新活動</div>
-                            <div class="newstext">新春・優惠再加碼｜3/4~3/6 限時3天寄5杯享85折</div>
+                            <div class="newstext">【小港平和南店】門市籌備中</div>
                         </a>
                     </div>
                     <div class="infoItem">
                         <a href="#">
                             <div class="date">2024/02/12</div>
                             <div class="type">最新活動</div>
-                            <div class="newstext">尋豆師手沖全面升級BEYOND SPECIALTY〖限量販售〗</div>
+                            <div class="newstext">官方粉專正式啟用囉~</div>
                         </a>
                     </div>
                     <div class="infoItem">
@@ -200,24 +202,24 @@
                     <div>線上訂餐</div>
                 </div>
             </a>
-            <a href="about.html" class="gridsize">
+            <a href="about.html" class="gridsize item2">
                 <div class="gridborder">
                     <div>品牌起源</div>
                 </div>
             </a>
 
-            <a href="menu.html" class="gridsize">
+            <a href="menu.html" class="gridsize item3">
                 <div class="gridborder">
                     <div>餐點介紹</div>
                 </div>
             </a>
 
-            <a href="store.html" class="gridsize">
+            <a href="store.html" class="gridsize item4">
                 <div class="gridborder">
                     <div>門市資訊</div>
                 </div>
             </a>
-            <a href="contact.html" class="gridsize">
+            <a href="contact.html" class="gridsize item5">
                 <div class="gridborder">
                     <div>聯絡表單</div>
                 </div>
@@ -242,23 +244,25 @@
     </script>
 
 
-    <!-- The Modal -->
+    <!-- The Modal 會員登入介面-->
     <div id="id01" class="modal">
         <span onclick="document.getElementById('id01').style.display='none'" class="close"
             title="Close Modal">&times;</span>
 
-        <!-- Modal Content -->
+        <!-- Modal Content 會員登入內文-->
         <form class="modal-content animate" action="">
             <div class="imgcontainer">
-                <div class="imgcircle">USER</div>
+                <div class="imgcircle">登入</div>
             </div>
 
             <div class="container">
                 <label for="uname"><b>會員帳號</b></label>
-                <input type="text" placeholder="輸入帳號" name="uname" required>
+                <input type="text" id="uname" placeholder="輸入帳號" name="uname" required>
+                <div id="unameError" style="color: red; font-size: smaller;"></div><!-- 紅字提示 -->
                 <br>
                 <label for="psw"><b>會員密碼</b></label>
-                <input type="password" placeholder="輸入密碼" name="psw" required>
+                <input type="password" id="psw" placeholder="輸入密碼" name="psw" required>
+                <div id="pswError" style="color: red; font-size: smaller;" ></div><!-- 紅字提示 -->
                 <br>
                 <label>
                     <input type="checkbox" checked="checked" name="remember"> 記住我
@@ -268,41 +272,21 @@
 
             <div class="container btuser">
 
-                <span class="psw">忘記 <a href="#">密碼</a></span>
+                <span class="psw">
+                    <a href="#" style="color: #3a5a40;">忘記密碼</a>
+                    <a href="sign.html" style="color: #3a5a40;">註冊會員</a>
+                </span>
+                
                 <div class="btuserflex">
-                    <button type="button" onclick="document.getElementById('id01').style.display='none'"
-                        class="cancelbtn">取消</button>
-                    <button type="submit">登入</button>
+                    <button type="submit" id="loginButton">登入</button>
                 </div>
 
             </div>
         </form>
     </div>
+    <script src="login.js"></script>
 
 
-
-
-
-    <!-- script Get the modal -->
-    <script>
-        // Get the modal
-        var modal = document.getElementById('id01');
-
-        // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function (event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
-    </script>
-
-    <!-- Slideshow 02 人氣食物 自動輪播圖片-->
-
-    <script>
-
-
-
-    </script>
 
 
     <!-- Slideshow 首頁 自動輪播圖片-->

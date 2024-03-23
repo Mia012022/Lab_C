@@ -22,7 +22,7 @@
         <header>
             <nav class="container">
                 <!-- 要放logo圖 -->
-                <h1 class="float-left">
+                <h1 class="float-left example">
                     <a href="index.html" class="logocolor">Früshstück芙舒可早午餐
 
                     </a>
@@ -137,7 +137,8 @@
             <div class="product">
                 <div class="position-relative">
                     <img src="img/pin01.png" alt="" class="w-100">
-                    <p class="bt-pro-flex"><button onclick="document.getElementById('id02').style.display='block'" class="bt-pro">古早味炒麵佐蘿蔔糕  <i class="fa-solid fa-plus"></i></button></p>
+                    <p class="bt-pro-flex"><button onclick="document.getElementById('id02').style.display='block'"
+                            class="bt-pro">古早味炒麵佐蘿蔔糕 <i class="fa-solid fa-plus"></i></button></p>
                     <div class="tag position-absolute">Hot</div>
 
                 </div>
@@ -145,29 +146,35 @@
             <div class="product">
                 <div class="position-relative">
                     <img src="img/pin02.png" alt="" class="w-100">
-                    <p class="bt-pro-flex"><button onclick="document.getElementById('id02').style.display='block'" class="bt-pro">鮮奶山峰厚片拼盤  <i class="fa-solid fa-plus"></i></button></p>
+                    <p class="bt-pro-flex"><button onclick="document.getElementById('id02').style.display='block'"
+                            class="bt-pro">鮮奶山峰厚片拼盤 <i class="fa-solid fa-plus"></i></button></p>
                     <div class="tag position-absolute">Hot</div>
                 </div>
             </div>
             <div class="product">
                 <img src="img/pin03.png" alt="" class="w-100">
-                <p class="bt-pro-flex"><button onclick="document.getElementById('id02').style.display='block'" class="bt-pro">Blue-Plate綜合炸物佐沙拉  <i class="fa-solid fa-plus"></i></button></p>
+                <p class="bt-pro-flex"><button onclick="document.getElementById('id02').style.display='block'"
+                        class="bt-pro">Blue-Plate綜合炸物佐沙拉 <i class="fa-solid fa-plus"></i></button></p>
             </div>
             <div class="product">
                 <img src="img/pin04.png" alt="" class="w-100">
-                <p class="bt-pro-flex"><button onclick="document.getElementById('id02').style.display='block'" class="bt-pro">美式牛肉佐鱈魚海陸拼盤 <i class="fa-solid fa-plus"></i></button></p>
+                <p class="bt-pro-flex"><button onclick="document.getElementById('id02').style.display='block'"
+                        class="bt-pro">美式牛肉佐鱈魚海陸拼盤 <i class="fa-solid fa-plus"></i></button></p>
             </div>
             <div class="product">
                 <img src="img/pin05.png" alt="" class="w-100">
-                <p class="bt-pro-flex"><button onclick="document.getElementById('id02').style.display='block'" class="bt-pro">厚牛起司堡雞塊拼盤 <i class="fa-solid fa-plus"></i></button></p>
+                <p class="bt-pro-flex"><button onclick="document.getElementById('id02').style.display='block'"
+                        class="bt-pro">厚牛起司堡雞塊拼盤 <i class="fa-solid fa-plus"></i></button></p>
             </div>
             <div class="product">
                 <img src="img/pin06.png" alt="" class="w-100">
-                <p class="bt-pro-flex"><button onclick="document.getElementById('id02').style.display='block'" class="bt-pro">雙泥沙拉炒蛋佐蘿蔔糕 <i class="fa-solid fa-plus"></i></button></p>
+                <p class="bt-pro-flex"><button onclick="document.getElementById('id02').style.display='block'"
+                        class="bt-pro">雙泥沙拉炒蛋佐蘿蔔糕 <i class="fa-solid fa-plus"></i></button></p>
             </div>
             <div class="product">
                 <img src="img/pin07.png" alt="" class="w-100">
-                <p class="bt-pro-flex"><button onclick="document.getElementById('id02').style.display='block'" class="bt-pro">田野培根薯餅可頌佐沙拉 <i class="fa-solid fa-plus"></i></button></p>
+                <p class="bt-pro-flex"><button onclick="document.getElementById('id02').style.display='block'"
+                        class="bt-pro">田野培根薯餅可頌佐沙拉 <i class="fa-solid fa-plus"></i></button></p>
             </div>
         </div>
         <!-- 產品列表   end -->
@@ -182,7 +189,7 @@
         <!-- Modal Content -->
         <form class="modal-content animate" action="">
             <div class="imgcontainer">
-                <div class="imgcircle">USER</div>
+                <div class="imgcircle">登入</div>
             </div>
 
             <div class="container">
@@ -202,7 +209,7 @@
 
                 <span class="psw">
                     <a href="#" style="color: #3a5a40;">忘記密碼</a>
-                    <a href="#" style="color: #3a5a40;">註冊會員</a>
+                    <a href="sign.html" style="color: #3a5a40;">註冊會員</a>
                 </span>
                 <div class="btuserflex">
                     <button type="button" onclick="document.getElementById('id01').style.display='none'"
@@ -241,13 +248,22 @@
                 <div class="btuserflex">
                     <button type="button" onclick="document.getElementById('id02').style.display='none'"
                         class="cancelbtn">取消</button>
-                    <button type="submit">確認</button>
+                    <button type="submit" onclick="amoutsubmit()">確認</button>
                 </div>
 
             </div>
         </form>
     </div>
-
+    <!-- 數量確認視窗 -->
+    <script>
+        function amoutsubmit(){
+           
+            alert("添加至購物車");
+        }
+        
+        
+        
+    </script>
 
     <!-- 線上訂餐 產品數量 彈出視窗 中間欄 -->
     <script>

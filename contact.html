@@ -22,7 +22,7 @@
         <header>
             <nav class="container">
                 <!-- 要放logo圖 -->
-                <h1 class="float-left">
+                <h1 class="float-left example">
                     <a href="index.html" class="logocolor">Früshstück芙舒可早午餐
 
                     </a>
@@ -122,13 +122,13 @@
                         <!-- 傳輸陣列要使用中括號結尾[] -->
 
 
-                        <label for="message">內容</label>
+                        <label for="message">備註</label>
 
                         <textarea name="message" id="message" cols="30" rows="10"></textarea>
 
                         <div class="insubmit">
-                            <input type="submit" value="清除重填">
-                            <input type="submit" value="送出表單">
+                            <input type="reset" value="清除重填">
+                            <input type="submit" onclick="formsubmit()" value="送出表單">
                         </div>
                     </form>
                     <!-- 聯絡表單 end -->
@@ -136,12 +136,17 @@
             </div>
         </div>
     </div>
-
+    <!-- 表單已提交 視窗 -->
+    <script>
+        function formsubmit(){
+            alert('感謝您的填寫，我們將盡快與您聯絡!');
+        }
+    </script>
 
     <!-- 購物車彈出視窗 左側欄 -->
     <script>
         function openNav() {
-            document.getElementById("mySidenav").style.width = "250px";
+            document.getElementById("mySidenav").style.width = "300px";
         }
 
         function closeNav() {
@@ -157,7 +162,7 @@
         <!-- Modal Content -->
         <form class="modal-content animate" action="">
             <div class="imgcontainer">
-                <div class="imgcircle">USER</div>
+                <div class="imgcircle">登入</div>
             </div>
 
             <div class="container">
@@ -177,7 +182,7 @@
 
                 <span class="psw">
                     <a href="#" style="color: #3a5a40;">忘記密碼</a>
-                    <a href="#" style="color: #3a5a40;">註冊會員</a>
+                    <a href="sign.html" style="color: #3a5a40;">註冊會員</a>
                 </span>
                 <div class="btuserflex">
                     <button type="button" onclick="document.getElementById('id01').style.display='none'"

@@ -22,7 +22,7 @@
         <header>
             <nav class="container">
                 <!-- 要放logo圖 -->
-                <h1 class="float-left">
+                <h1 class="float-left example">
                     <a href="index.html" class="logocolor">Früshstück芙舒可早午餐
 
                     </a>
@@ -64,7 +64,7 @@
 
     <!-- 回到首頁 固定定位 -->
     <a href="#" class="pagetop">TOP</a>
-
+    
     <!-- 標題 -->
     <div class="title">
         <div class="titletext">
@@ -73,7 +73,121 @@
 
     </div>
     <!-- 內文 -->
+    <div class="hh3">
+
+        人氣商品
+    </div>
+    <div class="midtop">
+        
+        <!-- Container for the image gallery -->
+        <div class="containermid">
+
+            <!-- Full-width images with number text -->
+            <div class="mySlides">
+                <div class="numbertext">1 / 6</div>
+                <img src="img/burg01.png" style="width:100%" height=500px >
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">2 / 6</div>
+                <img src="img/pin01.png" style="width:100%" height=500px>
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">3 / 6</div>
+                <img src="img/burg02.png" style="width:100%" height=500px>
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">4 / 6</div>
+                <img src="img/pin02.png" style="width:100%" height=500px>
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">5 / 6</div>
+                <img src="img/burg03.png" style="width:100%" height=500px>
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">6 / 6</div>
+                <img src="img/pin03.png" style="width:100%" height=500px>
+            </div>
+
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            <!-- Image text -->
+            <div class="caption-container">
+                <p id="caption"></p>
+            </div>
+
+            <!-- Thumbnail images -->
+            <div class="row">
+                <div class="column">
+                    <img class="demo cursor" src="img/burg01.png" style="width:100%" onclick="currentSlide(1)"
+                        alt="卡啦雞腿芝士堡(原味)">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="img/pin01.png" style="width:100%" onclick="currentSlide(2)"
+                        alt="古早味炒麵佐蘿蔔糕">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="img/burg02.png" style="width:100%" onclick="currentSlide(3)"
+                        alt="墨西哥卡啦雞腿芝士堡(辣)">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="img/pin02.png" style="width:100%" onclick="currentSlide(4)"
+                        alt="鮮奶山峰厚片拼盤">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="img/burg03.png" style="width:100%" onclick="currentSlide(5)"
+                        alt="芥末黃瓜牛肉芝士堡">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="img/pin03.png" style="width:100%" onclick="currentSlide(6)"
+                        alt="Blue-Plate綜合炸物佐沙拉">
+                </div>
+            </div>
+        </div>
+        <!-- 輪播圖片 js -->
+        <script>
+            let slideIndex = 1;
+            showSlides(slideIndex);
+
+            // Next/previous controls
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+
+            // Thumbnail image controls
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+                let i;
+                let slides = document.getElementsByClassName("mySlides");
+                let dots = document.getElementsByClassName("demo");
+                let captionText = document.getElementById("caption");
+                if (n > slides.length) { slideIndex = 1 }
+                if (n < 1) { slideIndex = slides.length }
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].className += " active";
+                captionText.innerHTML = dots[slideIndex - 1].alt;
+            }
+        </script>
+
+    </div>
     <div class="middle">
+
+
 
         <!-- 左邊 -->
         <div class="midleft">
@@ -181,13 +295,20 @@
                 </div>
 
                 <div class="tab tableft">
-                    <button class="tablinks" onclick="openMenu(event, 'plate')" style="background-color: #edbb6a;">拼盤</button>
-                    <button class="tablinks" onclick="openMenu(event, 'croissant')" style="background-color: red;">可頌</button>
-                    <button class="tablinks" onclick="openMenu(event, 'noodle')" style="background-color: brown;">麵食</button>
-                    <button class="tablinks" onclick="openMenu(event, 'fried')" style="background-color: yellow;">炸物</button>
-                    <button class="tablinks" onclick="openMenu(event, 'Ttoast')" style="background-color: brown;">厚片土司</button>
-                    <button class="tablinks" onclick="openMenu(event, 'pasta')" style="background-color: green;">義大利麵</button>
-                    <button class="tablinks" onclick="openMenu(event, 'salad')" style="background-color: #edbb6a;">沙拉</button>
+                    <button class="tablinks" onclick="openMenu(event, 'plate')"
+                        style="background-color: #edbb6a; border-radius: 80px 0px 0px 3px;">拼盤</button>
+                    <button class="tablinks" onclick="openMenu(event, 'croissant')"
+                        style="background-color: red; ">可頌</button>
+                    <button class="tablinks" onclick="openMenu(event, 'noodle')"
+                        style="background-color: brown;">麵食</button>
+                    <button class="tablinks" onclick="openMenu(event, 'fried')"
+                        style="background-color: yellow;">炸物</button>
+                    <button class="tablinks" onclick="openMenu(event, 'Ttoast')"
+                        style="background-color: brown;">厚片土司</button>
+                    <button class="tablinks" onclick="openMenu(event, 'pasta')"
+                        style="background-color: green;">義大利麵</button>
+                    <button class="tablinks" onclick="openMenu(event, 'salad')"
+                        style="background-color: #edbb6a; border-radius: 3px 0px 0px 80px;">沙拉</button>
                 </div>
 
             </div>
@@ -196,13 +317,19 @@
         <div class="midright">
 
             <div class="tab tabright">
-                <button class="tablinks" onclick="openMenu(event, 'polo')" style="background-color: #edbb6a;">菠蘿堡</button>
-                <button class="tablinks" onclick="openMenu(event, 'burger')" style="background-color: red;">美式漢堡</button>
-                <button class="tablinks" onclick="openMenu(event, 'chineseomelet')" style="background-color: brown;">蛋餅</button>
-                <button class="tablinks" onclick="openMenu(event, 'toast')" style="background-color: yellow;">吐司</button>
-                <button class="tablinks" onclick="openMenu(event, 'drink')" style="background-color: brown;">飲品咖啡</button>
+                <button class="tablinks tabtop" onclick="openMenu(event, 'polo')"
+                    style="background-color: #edbb6a; border-radius: 0px 80px 3px 0px;">菠蘿堡</button>
+                <button class="tablinks" onclick="openMenu(event, 'burger')"
+                    style="background-color: red;">美式漢堡</button>
+                <button class="tablinks" onclick="openMenu(event, 'chineseomelet')"
+                    style="background-color: brown;">蛋餅</button>
+                <button class="tablinks" onclick="openMenu(event, 'toast')"
+                    style="background-color: yellow;">吐司</button>
+                <button class="tablinks" onclick="openMenu(event, 'drink')"
+                    style="background-color: brown;">飲品咖啡</button>
                 <button class="tablinks" onclick="openMenu(event, 'rice')" style="background-color: green;">燉飯</button>
-                <button class="tablinks" onclick="openMenu(event, 'dessert')" style="background-color: #edbb6a;">甜點</button>
+                <button class="tablinks tabbottom" onclick="openMenu(event, 'dessert')"
+                    style="background-color: #edbb6a; border-radius: 0px 3px 80px 0px;">甜點</button>
 
             </div>
 
@@ -381,7 +508,7 @@
         <!-- Modal Content -->
         <form class="modal-content animate" action="">
             <div class="imgcontainer">
-                <div class="imgcircle">USER</div>
+                <div class="imgcircle">登入</div>
             </div>
 
             <div class="container">
@@ -401,7 +528,7 @@
 
                 <span class="psw">
                     <a href="#" style="color: #3a5a40;">忘記密碼</a>
-                    <a href="#" style="color: #3a5a40;">註冊會員</a>
+                    <a href="sign.html" style="color: #3a5a40;">註冊會員</a>
                 </span>
                 <div class="btuserflex">
                     <button type="button" onclick="document.getElementById('id01').style.display='none'"

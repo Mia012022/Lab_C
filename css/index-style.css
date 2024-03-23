@@ -1,7 +1,7 @@
 /* Slideshow container */
 .slideshow-container {
 
-  height: 650px;
+  height: 1000px;
   position: relative;
   margin: auto;
   overflow: hidden;
@@ -118,8 +118,13 @@
   line-height: 40px;
   color: #588157;
   font-weight: 700;
-
 }
+
+.midtext:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+
 
 .midsquare {
   display: flex;
@@ -140,31 +145,80 @@ h3 {
   background-color: rgba(255, 255, 255, 0.7)
 }
 
+.midsq:hover {
+  transform: scale(1.3);
+}
+
 /*方格圖塊*/
 .grid {
   width: 70%;
   margin: auto;
   display: grid;
-  grid-template-columns: auto auto ;
-  
+  grid-template-columns: auto auto auto;
+  grid-template-rows: 200px 200px;
 
 }
 
 .gridborder {
   background-color: #588157;
-  margin: 2px;
-  border-radius: 8px;
+
+  border-radius: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 30px;
   color: white;
-}
-.item1{
-  grid-column: 1/3;
+  width: 100%;
+  height: 100%;
+  transition: .5s ease;
+  opacity: 0;
 }
 
 .gridborder:hover {
+  opacity: 0.9;
+}
+
+.gridsize {
+  background-color: #717171;
+  margin: 3px;
+  border-radius: 5px;
+}
+
+.item1 {
+  grid-column: 1/3;
+  background-image: url(../img/index02.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.item2 {
+  
+  background-image: url(../img/index01.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.item3 {
+  
+  background-image: url(../img/toast01.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.item4 {
+  background-image: url(../img/toast02.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.item5 {
+  
+  background-image: url(../img/fruit.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.gridsize:hover {
   transform: scale(1.1);
   transition: 0.5s;
   background-color: #a3b18a;
@@ -194,6 +248,15 @@ h3 {
   text-align: center;
   border-bottom: 1px solid #dddddd;
 
+}
+.titleRegion p{
+  animation-name: title;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+@keyframes title{
+  from{color: #344e41;transform: scale(1);}
+  to{color: black;transform: scale(1.1);}
 }
 
 .infoItem {

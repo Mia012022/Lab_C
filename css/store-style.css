@@ -1,7 +1,7 @@
 .title{
     width: 100%;
     height: 200px;
- 
+    margin-top: 60px;
 }
 .titletext{
     display: flex;
@@ -46,7 +46,13 @@ tr:hover{
     justify-content: space-around;
     margin: 20px;
 }
-select, input[type="text"]{
+select{
+    border-radius: 15px;
+    border:1px  solid #344e41 ;
+    width: 200px;
+    height: 30px;
+}
+.searchBox input[type="text"]{
     border-radius: 15px;
     border:1px  solid #344e41 ;
     width: 200px;
@@ -56,7 +62,7 @@ select, input[type="text"]{
     display: flex;
 }
 .middle{
-    margin-bottom: 20px;
+    margin-bottom: 60px;
 }
 .searchBtnBox button{
     height: 30px;
