@@ -12,10 +12,12 @@ addButton.onclick = function () {
     numberInput.value = currentValue;
 };
 decreaseButton.onclick = function () {
-    if (numberInput.value != 0) {
+     if(numberInput.value !=0){
         currentValue--;                     //將值減少1
         numberInput.value = currentValue;
-    }
+     }
+        
+    
 
 };
 
