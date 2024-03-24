@@ -274,7 +274,23 @@ header {
 
     width: 100%;
 }
+.sucessfulModal{
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 50%;
+    background-color: #f3f6ee;
+    overflow-x: hidden;
+    transition: 0.5s;
 
+}
+.sucessfulContent{
+    width: 30%;
+    margin: auto;
+    background-color: #fefefe;
+}
 
 /* The Modal (background) */
 .modal {
@@ -292,7 +308,7 @@ header {
     /* Full height */
     overflow: auto;
     /* Enable scroll if needed */
-    
+
     /* Fallback color */
     background-color: rgba(0, 0, 0, 0.4);
     /* Black w/ opacity */
@@ -305,7 +321,7 @@ header {
     margin: 5px auto;
     /* 15% from the top and centered */
     border: 3px solid #888;
-
+    width: 40%;
     border-radius: 10px;
     /* Could be more or less, depending on screen size */
 }
@@ -405,9 +421,6 @@ header {
     width: 100%;
 }
 
-.modal-content {
-    width: 40%;
-}
 
 /* 購物車 */
 .sidenav {
@@ -417,12 +430,12 @@ header {
     z-index: 1;
     top: 0;
     right: 0;
-    background-color: #a3b18a;
+    background-color: #f3f6ee;
     overflow-x: hidden;
     transition: 0.5s;
-    padding-top: 60px;
-   
     
+
+
 }
 
 .sidenav a {
@@ -434,19 +447,31 @@ header {
     transition: 0.3s;
 }
 
-.sidenav a:hover {
-    color: #f1f1f1;
+.closebtn:hover{
+    color: #3a5a40;
 }
 
-.sidenav{
-    position: absolute;
-    
-    
-    
-}
-.closebtn{
+
+.closebtn {
     position: absolute;
     top: 15px;
     right: 15px;
 
+}
+
+.flexColumn {
+    width: 100%;
+    margin: 15px;
+    border-top: 2px solid #344e41;
+}
+
+.cartItemsHeight {
+    height: 75%;
+    width: 100%;
+    margin: 0px 2px 1px 12px;
+}
+.cartItemsHeight>ul>li{
+    border-left: 3px solid #3a5a40;
+    margin: 4px;
+    margin-bottom: 10px;
 }

@@ -121,3 +121,22 @@
 *{
   box-sizing: border-box;
 }
+.addToCartButton{
+  position: relative;
+}
+.hoverCart{
+  display: none;
+  width: 100px;
+}
+.addToCartButton:hover .hoverCart{
+  display: block;
+  position: absolute;
+  bottom: -30px;
+  left: 0;
+  color: white;
+  background-color: #6fa16f;
+  border-radius: 5px;
+  
+}
+
+

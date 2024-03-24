@@ -55,14 +55,16 @@
     </div>
     <!-- 購物車左側欄 -->
     <div id="mySidenav" class="sidenav">
+        <h2 style="margin-left: 5px;">購物車</h2>
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <div>
-            <ul id="cartItems">
 
-            </ul>
+        <div class="cartItemsHeight">
+            <ul id="cartItems"></ul>
         </div>
-        <p>Total Quantity: <span id="totalQuantity">0</span></p>
-        <p>Total Price: $<span id="totalPrice">0</span></p>
+        <div class="flexColumn">
+            <p>總數量: <span id="totalQuantity">0</span></p>
+            <p>總金額: $<span id="totalPrice">0</span></p>
+        </div>
 
     </div>
 
@@ -145,24 +147,23 @@
 
                 <div class="bt-pro-flex">古早味炒麵佐蘿蔔糕</div>
                 <div class="bt-pro-flex">
-                    <div class="bt-pro-flex">
-                        <button id="decreaseButton">
+                    <div>
+                        <button id="decreaseButton"> <!-- 減少數量 按鈕 -->
                             <i class="fa-solid fa-minus"></i>
                         </button>
-                        <input type="text" id="numberInput" value="0" style="width: 40px; text-align: center;">
-
-                        
-                            <button id="addButton">
-                                <i class="fa-solid fa-plus"></i>
-                            </button>
-
-                            <button class="addToCartButton" data-product="古早味炒麵佐蘿蔔糕" data-price="60"><i
-                                    class="fa-solid fa-cart-shopping"></i></button>
-                        
-
+                        <button id="addButton"> <!-- 增加數量 按鈕 -->
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                        <input type="text" id="numberInput" value="1" style="width: 40px; text-align: center;">
+                        <!--輸入框 數量-->
+                        <button class="addToCartButton" data-product="古早味炒麵佐蘿蔔糕" data-price="60"><i
+                                class="fa-solid fa-cart-shopping"></i> <!--添加至購物車 按鈕-->
+                            <div class="hoverCart">加入購物車</div> <!-- 懸浮提示 -- 購物車 -->
+                        </button>
                     </div>
                 </div>
             </div>
+
             <div class="product">
                 <img src="img/pin02.png" alt="" class="w-100">
                 <div class="bt-pro-flex">鮮奶山峰厚片拼盤</button></div>
@@ -171,12 +172,14 @@
                         <button id="decreaseButton02">
                             <i class="fa-solid fa-minus"></i>
                         </button>
-                        <input type="text" id="numberInput02" value="0" style="width: 40px; text-align: center;">
                         <button id="addButton02">
                             <i class="fa-solid fa-plus"></i>
                         </button>
+                        <input type="text" id="numberInput02" value="1" style="width: 40px; text-align: center;">
                         <button class="addToCartButton" data-product="鮮奶山峰厚片拼盤" data-price="70"><i
-                                class="fa-solid fa-cart-shopping"></i></button>
+                                class="fa-solid fa-cart-shopping"></i>
+                            <div class="hoverCart">加入購物車</div>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -188,11 +191,14 @@
                         <button id="decreaseButton03">
                             <i class="fa-solid fa-minus"></i>
                         </button>
-                        <input type="text" id="numberInput03" value="0" style="width: 40px; text-align: center;">
                         <button id="addButton03">
                             <i class="fa-solid fa-plus"></i>
                         </button>
-
+                        <input type="text" id="numberInput03" value="1" style="width: 40px; text-align: center;">
+                        <button class="addToCartButton" data-product="Blue-Plate綜合炸物佐沙拉" data-price="80"><i
+                                class="fa-solid fa-cart-shopping"></i>
+                            <div class="hoverCart">加入購物車</div>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -204,11 +210,14 @@
                         <button id="decreaseButton04">
                             <i class="fa-solid fa-minus"></i>
                         </button>
-                        <input type="text" id="numberInput04" value="0" style="width: 40px; text-align: center;">
                         <button id="addButton04">
                             <i class="fa-solid fa-plus"></i>
                         </button>
-
+                        <input type="text" id="numberInput04" value="1" style="width: 40px; text-align: center;">
+                        <button class="addToCartButton" data-product="美式牛肉佐鱈魚海陸拼盤" data-price="90"><i
+                                class="fa-solid fa-cart-shopping"></i>
+                            <div class="hoverCart">加入購物車</div>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -220,11 +229,14 @@
                         <button id="decreaseButton05">
                             <i class="fa-solid fa-minus"></i>
                         </button>
-                        <input type="text" id="numberInput05" value="0" style="width: 40px; text-align: center;">
                         <button id="addButton05">
                             <i class="fa-solid fa-plus"></i>
                         </button>
-
+                        <input type="text" id="numberInput05" value="1" style="width: 40px; text-align: center;">
+                        <button class="addToCartButton" data-product="厚牛起司堡雞塊拼盤" data-price="100"><i
+                                class="fa-solid fa-cart-shopping"></i>
+                            <div class="hoverCart">加入購物車</div>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -236,11 +248,14 @@
                         <button id="decreaseButton06">
                             <i class="fa-solid fa-minus"></i>
                         </button>
-                        <input type="text" id="numberInput06" value="0" style="width: 40px; text-align: center;">
                         <button id="addButton06">
                             <i class="fa-solid fa-plus"></i>
                         </button>
-
+                        <input type="text" id="numberInput06" value="1" style="width: 40px; text-align: center;">
+                        <button class="addToCartButton" data-product="雙泥沙拉炒蛋佐蘿蔔糕" data-price="70"><i
+                                class="fa-solid fa-cart-shopping"></i>
+                            <div class="hoverCart">加入購物車</div>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -252,11 +267,14 @@
                         <button id="decreaseButton07">
                             <i class="fa-solid fa-minus"></i>
                         </button>
-                        <input type="text" id="numberInput07" value="0" style="width: 40px; text-align: center;">
                         <button id="addButton07">
                             <i class="fa-solid fa-plus"></i>
                         </button>
-
+                        <input type="text" id="numberInput07" value="1" style="width: 40px; text-align: center;">
+                        <button class="addToCartButton" data-product="田野培根薯餅可頌佐沙拉" data-price="70"><i
+                                class="fa-solid fa-cart-shopping"></i>
+                            <div class="hoverCart">加入購物車</div>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -264,6 +282,7 @@
         <!-- 產品列表   end -->
     </div>
 
+   
 
     <!-- The Modal 會員登入 視窗-->
     <div id="id01" class="modal">
@@ -304,6 +323,7 @@
             </div>
         </form>
     </div>
+
 
 
 

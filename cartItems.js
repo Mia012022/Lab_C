@@ -13,7 +13,7 @@ addToCartButtons.forEach(button => {
     button.addEventListener('click', function () {
         // 獲取商品資訊
         const productName = this.getAttribute('data-product');
-        const number = document.getElementById('numberInput');   
+        const number = this.previousElementSibling;   
         const numberq = parseInt(number.value);
         const productPrice = parseFloat(this.getAttribute('data-price'));
         
@@ -28,11 +28,13 @@ addToCartButtons.forEach(button => {
             // 如果商品不存在，新增商品到購物車
             cartItems.push({ product: productName, quantity: numberq, totalPrice: productPrice*numberq});
         }
-
-        // 更新購物車顯示
+      // 更新購物車顯示
         updateCartDisplay();
+        alert('已加入購物車');
     });
 });
+
+
 
 // 更新購物車顯示
 function updateCartDisplay() {
@@ -54,3 +56,4 @@ function updateCartDisplay() {
     totalQuantityElement.textContent = totalQuantity;
     totalPriceElement.textContent = totalPrice.toFixed(2);
 }
+
