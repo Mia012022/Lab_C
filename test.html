@@ -24,13 +24,15 @@
       <li>
 
         Product C
-        <button>家</button>
-          <input type="number" id="productCQuantity" min="1" value="1">
-        
-        
-          
-          <button class="addToCartButton" data-product="Product C">Add to Cart</button>
-        
+        <button id="decrease">減</button>
+
+        <input type="number" id="productCQuantity" min="1" value="1">
+        <button id="add">加</button>
+
+
+
+        <button class="addToCartButton" data-product="Product C">Add to Cart</button>
+
       </li>
     </ul>
   </div>
@@ -53,7 +55,8 @@
       button.addEventListener('click', function () {
         // 獲取商品名稱和數量
         const productName = this.getAttribute('data-product');
-        const quantityInput = this.previousElementSibling;
+        const quantityInput01 = this.previousElementSibling;
+        const quantityInput = quantityInput01.previousElementSibling;
         const quantity = parseInt(quantityInput.value);
 
         // 創建新的購物車商品列表項目
@@ -75,7 +78,14 @@
     });
 
   </script>
-
+<script>
+  const add = document.getElementById('add');
+  const decrease = document.getElementById('decrease');
+  add.onclick =function(){
+    let number =this.previousElementSibling.value;
+    number++
+  }
+</script>
 </body>
 
 </html>

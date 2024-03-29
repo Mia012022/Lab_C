@@ -43,7 +43,13 @@
             <div class="topright">
                 <div class="carticon">
                     <!-- 購物車按鈕 -->
-                    <button onclick="openNav()"><i class="fa-solid fa-cart-shopping"></i></button>
+                    <div>
+                        <button onclick="openNav()"><i class="fa-solid fa-cart-shopping"></i></button>
+                    </div>
+                    
+                    <div id="cartQty">
+
+                    </div>
                 </div>
                 <div class="usericon">
                     <!-- 會員登入按鈕 -->
@@ -61,9 +67,17 @@
         <div class="cartItemsHeight">
             <ul id="cartItems"></ul>
         </div>
+
         <div class="flexColumn">
-            <p>總數量: <span id="totalQuantity">0</span></p>
-            <p>總金額: $<span id="totalPrice">0</span></p>
+            <div class="fc-left">
+                <p>總數量: <span id="totalQuantity">0</span></p>
+                <p>總金額: $<span id="totalPrice">0</span></p>
+            </div>
+
+            <div class="fc-right">
+                <button>確認結帳</button>
+            </div>
+
         </div>
 
     </div>
@@ -282,7 +296,7 @@
         <!-- 產品列表   end -->
     </div>
 
-   
+
 
     <!-- The Modal 會員登入 視窗-->
     <div id="id01" class="modal">
@@ -324,7 +338,10 @@
         </form>
     </div>
 
+<script>
+    
 
+</script>
 
 
     <!-- 購物車彈出視窗 左側欄 -->

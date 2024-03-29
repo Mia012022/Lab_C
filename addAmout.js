@@ -87,3 +87,72 @@ decreaseButton04.onclick = function () {
     }
 
 };
+// 選擇 input 元素和按鈕元素  --05--
+const numberInput05 = document.getElementById('numberInput05');
+const addButton05 = document.getElementById('addButton05');
+const decreaseButton05 = document.getElementById('decreaseButton05');
+let currentValue05 = parseInt(numberInput05.value);
+// 添加點擊事件監聽器到按鈕
+
+addButton05.onclick = function () {
+    // 獲取 input 元素的當前值並轉換為數字
+
+    // 將值增加 1
+    currentValue05++;
+    // 更新 input 元素的值
+    numberInput05.value = currentValue05;
+};
+
+decreaseButton05.onclick = function () {
+    if (numberInput05.value != 1) {
+        currentValue05--;
+        numberInput05.value = currentValue05;
+    }
+
+};
+// 選擇 input 元素和按鈕元素  --06--
+const numberInput06 = document.getElementById('numberInput06');
+const addButton06 = document.getElementById('addButton06');
+const decreaseButton06 = document.getElementById('decreaseButton06');
+let currentValue06 = parseInt(numberInput06.value);
+// 添加點擊事件監聽器到按鈕
+
+addButton06.onclick = function () {
+    // 獲取 input 元素的當前值並轉換為數字
+
+    // 將值增加 1
+    currentValue06++;
+    // 更新 input 元素的值
+    numberInput06.value = currentValue06;
+};
+
+decreaseButton06.onclick = function () {
+    if (numberInput06.value != 1) {
+        currentValue06--;
+        numberInput06.value = currentValue06;
+    }
+
+};
+// 選擇 input 元素和按鈕元素  --07--
+const numberInput07 = document.getElementById('numberInput07');
+const addButton07 = document.getElementById('addButton07');
+const decreaseButton07 = document.getElementById('decreaseButton07');
+let currentValue07 = parseInt(numberInput07.value);
+// 添加點擊事件監聽器到按鈕
+
+addButton07.onclick = function () {
+    // 獲取 input 元素的當前值並轉換為數字
+
+    // 將值增加 1
+    currentValue07++;
+    // 更新 input 元素的值
+    numberInput07.value = currentValue07;
+};
+
+decreaseButton07.onclick = function () {
+    if (numberInput07.value != 1) {
+        currentValue07--;
+        numberInput07.value = currentValue07;
+    }
+
+};

@@ -24,12 +24,18 @@ addToCartButtons.forEach(button => {
             // 如果商品已存在，增加數量和價格
             existingItem.quantity= existingItem.quantity + numberq;
             existingItem.totalPrice += productPrice*numberq;
+
         } else {
             // 如果商品不存在，新增商品到購物車
-            cartItems.push({ product: productName, quantity: numberq, totalPrice: productPrice*numberq});
+            cartItems.push({ product: productName,quantity: numberq, totalPrice: productPrice*numberq});
+            
+            
+           
         }
       // 更新購物車顯示
+        
         updateCartDisplay();
+        updateCart();
         alert('已加入購物車');
     });
 });
@@ -41,12 +47,12 @@ function updateCartDisplay() {
     // 清空購物車列表
     cartItemsList.innerHTML = '';
 
-
+   
     // 更新購物車商品列表和總計
 
     cartItems.forEach(item => {
         const cartItem = document.createElement('li');
-        cartItem.textContent = `${item.product} x ${item.quantity} - $${item.totalPrice.toFixed(2)}`;
+        cartItem.textContent = `${item.product} x${item.quantity}  $${item.totalPrice}`;
         cartItemsList.appendChild(cartItem);
     });
 
@@ -54,6 +60,11 @@ function updateCartDisplay() {
     totalQuantity = cartItems.reduce((total, item) => total + item.quantity, 0);
     totalPrice = cartItems.reduce((total, item) => total + item.totalPrice, 0);
     totalQuantityElement.textContent = totalQuantity;
-    totalPriceElement.textContent = totalPrice.toFixed(2);
+    totalPriceElement.textContent = totalPrice;
+    
+}
+function updateCart(){
+        const cartQty = document.getElementById('cartQty');
+        cartQty.innerHTML=`${totalQuantity}`;
 }
 
