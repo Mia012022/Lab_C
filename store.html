@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
     <title>門市查詢|Früshstück芙舒可早午餐</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/store-style.css">
@@ -85,175 +87,120 @@
             <form action="">
                 <div class="storesearch">
                     <div class="city">
-
                         <select name="cityse" id="cityse">
-                            <option>全區</option>
-                            <option value="1">新北市</option>
-                            <option value="2">台北市</option>
-                            <option value="3">桃園市</option>
-                            <option value="4">台中市</option>
-                            <option value="5">台南市</option>
-                            <option value="6">高雄市</option>
+                            <option value="全區">全區</option>
+                            <option value="新北市">新北市</option>
+                            <option value="台北市">台北市</option>
+                            <option value="桃園市">桃園市</option>
+                            <option value="台中市">台中市</option>
+                            <option value="台南市">台南市</option>
+                            <option value="高雄市">高雄市</option>
                         </select>
+
                     </div>
-                    <div class="location">
+                    <!-- <div class="location">
 
                         <select name="target" id="target">
                             <option>全區</option>
 
                         </select>
-                    </div>
+                    </div> -->
                     <div class="searchflex">
                         <div class="searchBox">
-                            <input type="text" class="light-table-filter" data-table="listse" placeholder="Search..">
+                            <input type="text" id="city-search" class="light-table-filter" data-table="listse"
+                                placeholder="Search..">
                         </div>
-                        <div class="searchBtnBox">
-                            <button>搜尋</button>
-                        </div>
+
                     </div>
                 </div>
             </form>
             <!-- 門市選單搜尋 -->
             <script>
-                let select = document.querySelector("#cityse");
-                select.addEventListener("change", selectFun);
-                function selectFun() {
-                    const switchValue = select.options[select.selectedIndex].value;
-                    switch (switchValue) {
-                        case "1":
-                            option_01();
-                            break;
-                        case "2":
-                            option_02();
-                            break;
-                        case "3":
-                            option_03();
-                            break;
-                        case "4":
-                            option_04();
-                            break;
-                        case "5":
-                            option_05();
-                            break;
-                        case "6":
-                            option_06();
-                            break;
-                        default:
-                            return;
-                    }
-                }
-                function option_01() {
-                    alert("選到 option_01");
-                }
+
             </script>
             <!-- 門市打字搜尋 -->
             <script>
-                (function (document) {
-                    'use strict';
+                $(document).ready(function () {
+                    $('#city-search').on('input', function () {
+                        var searchValue = $(this).val().toLowerCase();
 
-                    // 建立 LightTableFilter
-                    var LightTableFilter = (function (Arr) {
+                        $('tbody.listse tr').each(function () {
+                            var cityName = $(this).data('city').toLowerCase();
+                            var shopName = $(this).find('td:first').text().toLowerCase(); // 門市名稱
 
-                        var _input;
-
-                        // 資料輸入事件處理函數
-                        function _onInputEvent(e) {
-                            _input = e.target;
-                            var tables = document.getElementsByClassName(_input.getAttribute('data-table'));
-                            Arr.forEach.call(tables, function (table) {
-                                Arr.forEach.call(table.tBodies, function (tbody) {
-                                    Arr.forEach.call(tbody.rows, _filter);
-                                });
-                            });
-                        }
-
-                        // 資料篩選函數，顯示包含關鍵字的列，其餘隱藏
-                        function _filter(row) {
-                            var text = row.textContent.toLowerCase(), val = _input.value.toLowerCase();
-                            row.style.display = text.indexOf(val) === -1 ? 'none' : 'table-row';
-                        }
-
-                        return {
-                            // 初始化函數
-                            init: function () {
-                                var inputs = document.getElementsByClassName('light-table-filter');
-                                Arr.forEach.call(inputs, function (input) {
-                                    input.oninput = _onInputEvent;
-                                });
+                            if (cityName.indexOf(searchValue) !== -1 || shopName.indexOf(searchValue) !== -1) {
+                                $(this).show();
+                            } else {
+                                $(this).hide();
                             }
-                        };
-                    })(Array.prototype);
-
-                    // 網頁載入完成後，啟動 LightTableFilter
-                    document.addEventListener('readystatechange', function () {
-                        if (document.readyState === 'complete') {
-                            LightTableFilter.init();
-                        }
+                        });
                     });
+                });
 
-                })(document);
+
+
             </script>
             <!-- 門市資訊表格 -->
             <table class="list">
-                <tr>
-                    <th class="thcolor">門市名稱</th>
-                    <th class="thcolor">地址</th>
-                    <th class="thcolor">電話</th>
-                </tr>
-                <table class="list listse">
+                <thead>
                     <tr>
+                        <th class="thcolor">門市名稱</th>
+                        <th class="thcolor">地址</th>
+                        <th class="thcolor">電話</th>
+                    </tr>
+                </thead>
+                <tbody class="listse">
+                    <tr data-city="台北市">
                         <td>經典門市-台北和平店</td>
                         <td>台北市大安區和平東路三段6號</td>
                         <td>(02)2739-0918</td>
                     </tr>
-                    <tr>
+                    <tr data-city="桃園市">
                         <td>經典門市-青埔新生店</td>
-                        <td >桃園市大園區新生路四段271號</td>
+                        <td>桃園市大園區新生路四段271號</td>
                         <td>(03)287-5519</td>
                     </tr>
-                    <tr>
+                    <tr data-city="桃園市">
                         <td>經典門市-桃園藝文門市</td>
                         <td>桃園市桃園區中埔六街32號</td>
                         <td>(03)358-7599</td>
                     </tr>
-                    <tr>
+                    <tr data-city="新北市">
                         <td>經典門市-三重旗艦門市</td>
                         <td>新北市三重區重新路五段609巷2-1號</td>
                         <td>(02)2278-2322</td>
                     </tr>
-                    <tr>
+                    <tr data-city="新北市">
                         <td>經典門市-三重重新門市</td>
                         <td>新北市三重區重新路三段94號</td>
                         <td>(02)2978-8711</td>
                     </tr>
-                    <tr>
+                    <tr data-city="新北市">
                         <td>經典門市-台北橋門市</td>
                         <td>新北市三重區重新路二段12號</td>
                         <td>(02)2970-6008</td>
                     </tr>
-                    <tr>
+                    <tr data-city="台中市">
                         <td>經典門市-福星公園門市</td>
                         <td>台中市西屯區河南路2段301巷72號</td>
                         <td>(04)2452-9143</td>
                     </tr>
-                    <tr>
+                    <tr data-city="台中市">
                         <td>經典門市-台中大墩門市</td>
                         <td>台中市南屯區大墩路806號</td>
                         <td>(04)2326-2617</td>
                     </tr>
-                    <tr>
+                    <tr data-city="台南市">
                         <td>經典門市-台南湖美門市</td>
                         <td>台南市中西區中華西路二段588號1樓</td>
                         <td>(06)358-2300</td>
                     </tr>
-                    <tr>
+                    <tr data-city="高雄市">
                         <td>經典門市-高雄新光門市</td>
-                        <td>高雄市 前鎮區 文橫三路192號</td>
+                        <td>高雄市前鎮區文橫三路192號</td>
                         <td>(07)338-6881</td>
                     </tr>
-
-                </table>
-
+                </tbody>
             </table>
             <!-- 表格 end -->
         </div>
@@ -262,6 +209,22 @@
 
     <!-- 購物車彈出視窗 左側欄 -->
     <script>
+        $(document).ready(function () {
+            $('#cityse').on('change', function () {
+                var selectedCity = $(this).val();
+
+                $('tbody.listse tr').each(function () {
+                    var city = $(this).data('city');
+
+                    if (selectedCity === '全區' || city === selectedCity) {
+                        $(this).show();
+                    } else {
+                        $(this).hide();
+                    }
+                });
+            });
+        });
+
         function openNav() {
             document.getElementById("mySidenav").style.width = "250px";
         }

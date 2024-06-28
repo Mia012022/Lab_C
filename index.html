@@ -291,16 +291,16 @@
 
     <!-- Slideshow 首頁 自動輪播圖片-->
     <script>
-        let slideIndex = 0;
-        showSlides();
+        let slideIndex = 0;//宣告 輪播編號
+        showSlides();//呼叫 自動輪播圖片 方法
 
         function showSlides() {
             let i;
-            let slides = document.getElementsByClassName("mySlides");
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
+            let slides = document.getElementsByClassName("mySlides");//取得圖片
+            for (i = 0; i < slides.length; i++) {//取得圖片有3張 [0] [1] [2]
+                slides[i].style.display = "none"; //圖片隱藏
             }
-            slideIndex++;
+            slideIndex++;//輪播編號增加
 
             if (slideIndex > slides.length) {
                 slideIndex = 1
